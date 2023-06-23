@@ -10,7 +10,7 @@ draft: false
 # 2022-2023
 
 ## [The quantum maxima for the basic graphs of exclusivity are not reachable in Bell scenarios](https://arxiv.org/abs/2305.19247)
-**Authors:** Lucas E. A. Porto, Rafael Rabelo, Marcelo Terra Cunha, Adán Cabello
+**Authors:** Lucas E. A. Porto, Rafael Rabelo, Marcelo Terra Cunha, Adán Cabello  
 **Published in:** Preprint  
 **Originally announced:** May 2023
 
