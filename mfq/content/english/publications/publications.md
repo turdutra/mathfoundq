@@ -7,7 +7,21 @@ description : "publication list"
 draft: false
 ---
 
-# 2022
+# 2022-2023
+
+## [The quantum maxima for the basic graphs of exclusivity are not reachable in Bell scenarios](https://arxiv.org/abs/2305.19247)
+**Authors:** Lucas E. A. Porto, Rafael Rabelo, Marcelo Terra Cunha, Adán Cabello
+**Published in:** Preprint  
+**Originally announced:** May 2023
+
+---
+
+## [Contextuality in multi-agent paradoxes](https://arxiv.org/abs/2305.07792)
+**Authors:** Sidiney B. Montanhano  
+**Published in:** Preprint  
+**Originally announced:** May 2023
+
+---
 
 ## [Witnessing Non-Classicality in a Simple Causal Structure with Three Observable Variables](https://arxiv.org/abs/2211.13349)
 **Authors:** Pedro Lauand, Davide Poderini, Ranieri Nery, George Moreno, Lucas Pollyceno, Rafael Rabelo, Rafael Chaves  
@@ -67,9 +81,9 @@ draft: false
 
 ---
 
-## [On quantum sets of the multicoloured-graph approach to contextuality](https://arxiv.org/abs/2105.08561)  
+## [Quantum sets of the multicolored-graph approach to contextuality](https://arxiv.org/abs/2105.08561)  
 **Authors:** Lina Vandré, Marcelo Terra Cunha  
-**Published in:** Preprint  
+**Published in:** Phys. Rev. A 106, 062210 (2022)  
 **Originally announced:** May 2021  
 
 ---
