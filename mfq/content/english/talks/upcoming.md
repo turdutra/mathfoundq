@@ -7,12 +7,12 @@ description : "upcoming nonlocal talks"
 draft: false
 ---
 
-<h1 style="display:inline-block;">Miguel Navascués</h1> &nbsp;&nbsp;&nbsp; <h2 style="display:inline-block;">(IQOQI, Vienna - Austria)</h2>
+<h1 style="display:inline-block;">Luiz Davidovich</h1> &nbsp;&nbsp;&nbsp; <h2 style="display:inline-block;">(UFRJ, Rio de Janeiro - Brasil)</h2>
 
-## Universal protocols for time translation
-### May 15, 2023
+## Quantifying Quantum Metrology
+### Jun 30, 2023
 
-I will show that there exist non-relativistic scattering experiments which, if successful, freeze out, speed up or even reverse the free dynamics of any ensemble of quantum systems present in the scattering region. This time translation effect is universal, i.e., it is independent of the particular interaction between the scattering particles and the target systems, or the (possibly non-Hermitian) Hamiltonian governing the evolution of the latter. The protocols require careful preparation of the probes that are scattered, and success is heralded by projective measurements of these probes at the conclusion of the experiment. The possible time translations which once can effect on multiple target systems through a scattering protocol of fixed duration are precisely those that satisfy the following rules: a) (evolution) time cannot be created; b) time can be transferred between systems with the same free Hamiltonian at no cost; c) time can be inverted, but at a cost: rewinding a target system by T seconds requires disposing of (D-1)T seconds of time, where D is the Hilbert space dimension of the target.
+Metrology is an important area of ​​new quantum technologies, with applications in gravitational and magnetic field sensors, accelerometers and gyrometers, among others. In this lecture, a review of quantum metrology methods will be presented and recent results involving noisy systems will be discussed, with a large quantum advantage compared to classical estimation methods.
 
 <br><br><hr>
 
