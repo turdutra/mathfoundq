@@ -81,7 +81,7 @@ draft: false
 
 ---
 
-## [Quantum sets of the multicolored-graph approach to contextuality](https://arxiv.org/abs/2105.08561)  
+## [Quantum sets of the multicolored-graph approach to contextuality](https://doi.org/10.1103/PhysRevA.106.062210)  
 **Authors:** Lina Vandré, Marcelo Terra Cunha  
 **Published in:** Phys. Rev. A 106, 062210 (2022)  
 **Originally announced:** May 2021  

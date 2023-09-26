@@ -6,9 +6,13 @@ images:
 
 # meta description
 description : "patrick andriolo landing page"
-summary: Undergraduate student
-categories: student
+summary: Alumni
+categories: alumni
 draft: false
 ---
 
-I'm an undergraduate student at the Physics Institute of the University of São Paulo (IFUSP). In my Scientific Initiation project I study Quantum Information and General Probabilistic Theories while my research explores the colored graph approach to non-contextual inequalities. I have also enthusiasm about the intersections between Relativity and Quantum Theory.
+Contributed to the group from 2021 to 2023 as an undergraduate student.
+
+More information about this researcher can be found in the link below:
+
+[Lattes](http://lattes.cnpq.br/7845214151868455)<br>
