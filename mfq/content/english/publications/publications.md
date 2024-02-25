@@ -9,9 +9,16 @@ draft: false
 
 # 2022-2023
 
+## [Can multiple observers detect KS-contextuality?](https://arxiv.org/abs/2310.19564)
+**Authors:** Arthur C. R. Dutra, Roberto D. Baldijão, Marcelo Terra Cunha  
+**Published in:** Preprint  
+**Originally announced:** Oct 2023
+
+---
+
 ## [The quantum maxima for the basic graphs of exclusivity are not reachable in Bell scenarios](https://arxiv.org/abs/2305.19247)
 **Authors:** Lucas E. A. Porto, Rafael Rabelo, Marcelo Terra Cunha, Adán Cabello  
-**Published in:** Preprint  
+**Published in:** Philosophical Transactions of the Royal Society A  
 **Originally announced:** May 2023
 
 ---

@@ -71,6 +71,7 @@ name = "About Us"
 url = "about"
 weight = 6
 
+
 [[menu.footer]]
 name = "People"
 url = "people"
@@ -96,6 +97,7 @@ weight = 5
 name = "About"
 url = "about"
 weight = 6
+
 
 ########################### Default parameters ##########################
 [params]

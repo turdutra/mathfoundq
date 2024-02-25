@@ -7,5 +7,5 @@ description : "upcoming nonlocal talks"
 draft: false
 ---
 
-<h1 style="display:inline-block;">Mores Soon!</h1> &nbsp;&nbsp;&nbsp; <h2 style="display:inline-block;"></h2>
+<h1 style="display:inline-block;">More Soon!</h1> &nbsp;&nbsp;&nbsp; <h2 style="display:inline-block;"></h2>
 
