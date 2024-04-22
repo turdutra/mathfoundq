@@ -1,0 +1,20 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.promo.enable }}
+{{ with $data.homepage.promo }}
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading">
+          <h2 class="subheading font-weight-bold mb-10">{{ .title | markdownify }}</h2>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        {{ readFile "publications/highlighted-publications.md" | markdownify }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

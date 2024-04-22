@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mb-4 mb-md-0">
+        <!-- product image slider -->
+<!--         <div class="product-image-slider">
+          {{ range .Params.images }} -->
+          <div data-image="{{ . | absURL }}">
+            <img class="img-fluid w-100" src="{{ . | absURL }}" alt="product-image">
+          </div>
+<!--           {{ end }}
+        </div> -->
+      </div>
+      <div class="col-lg-6 col-md-7 offset-lg-1">
+        <h1 class="mb-4">{{ .Title }}</h1>
+        <div class="content">{{.Content}}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

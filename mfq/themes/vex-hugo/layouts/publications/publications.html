@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+      {{ range (where .Site.RegularPages "Section" "publications") }}
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h1>{{.Title}}</h1>
+          </div>
+        </div>
+        <div class="content">
+          {{.Content}}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
