@@ -71,6 +71,11 @@ name = "About Us"
 url = "about"
 weight = 6
 
+[[menu.main]]
+name = "Photo Gallery"
+url = "gallery"
+weight = 7
+
 
 [[menu.footer]]
 name = "People"
@@ -98,6 +103,10 @@ name = "About"
 url = "about"
 weight = 6
 
+[[menu.footer]]
+name = "Photo Gallery"
+url = "gallery"
+weight = 7
 
 ########################### Default parameters ##########################
 [params]

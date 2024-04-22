@@ -6,6 +6,9 @@ date: 2019-10-17T11:22:16+06:00
 description : "publication list"
 draft: false
 ---
+<!-- Each field should end with double spaces to properly break the line -->
+
+
 
 # 2022-2023
 
@@ -23,7 +26,7 @@ draft: false
 
 ---
 
-## [Contextuality in multi-agent paradoxes](https://arxiv.org/abs/2305.07792)
+## [Wigner and friends, a map is not the territory! Contextuality in multi-agent paradoxes](https://arxiv.org/abs/2305.07792)
 **Authors:** Sidiney B. Montanhano  
 **Published in:** Preprint  
 **Originally announced:** May 2023
@@ -81,7 +84,7 @@ draft: false
 
 ---
 
-## [Contextuality in the Fibration Approach and the Role of Holonomy](https://arxiv.org/abs/2105.14132)  
+## [Contextuality in the Bundle Approach, n-Contextuality, and the Role of Holonomyontextuality in the Fibration Approach and the Role of Holonomy](https://arxiv.org/abs/2105.14132)  
 **Authors:** Sidiney B. Montanhano  
 **Published in:** Preprint  
 **Originally announced:** May 2021  

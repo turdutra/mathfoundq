@@ -6,8 +6,8 @@ images:
 
 # meta description
 description : "carlos humberto vieira landing page"
-summary: Ph.D. student
-categories: student
+summary: Alumni
+categories: alumni
 draft: false
 ---
 

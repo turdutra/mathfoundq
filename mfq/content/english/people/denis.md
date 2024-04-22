@@ -6,8 +6,8 @@ images:
 
 # meta description
 description : "denis moraes landing page"
-summary: Undergraduate student
+summary: M.Sc. student
 categories: student
 draft: false
 ---
-Undergradute student in physics at the University of Campinas (UNICAMP). Currently working on a Scientific Initiation project on entanglement in random access codes. My main intrests are foundations of quantum theory, particularly entanglement.
+Bachelor in Physics by the University of Campinas (UNICAMP), currently pursuing a Master's degree in Physics at the Gleb Wataghin Institute of Physics - University of Campinas (IFGW - UNICAMP). My main research interests are quantum foundations and quantum information theory.

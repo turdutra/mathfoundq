@@ -6,8 +6,8 @@ images:
 
 # meta description
 description : "arthur dutra landing page"
-summary: M.Sc. student
+summary: Ph.D. student
 categories: student
 draft: false
 ---
-Bachelor in Physics by the São Carlos Institute of Physics, University of São Paulo (IFSC-USP). Currently pursuing a Master’s degree in Applied Mathematics at the Institute of Mathematics, Statistics and Scientific Computing, University of Campinas (IMECC-UNICAMP).
+I hold a Bachelor of Science degree in Physics from the São Carlos Institute of Physics at the University of São Paulo (IFSC-USP). Following my undergraduate studies, I earned a Master of Science in Applied Mathematics from the Institute of Mathematics, Statistics, and Scientific Computing at the State University of Campinas (IMECC-UNICAMP). Presently, I am pursuing a Ph.D. in Applied Mathematics at the same institute. My main interest is KS-contextuality.
