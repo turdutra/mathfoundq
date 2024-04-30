@@ -1,6 +1,5 @@
 ---
 title: "Lucas Pollyceno"
-date: 2019-10-17T11:22:16+06:00
 images: 
   - "images/showcase/lucas.png"
 

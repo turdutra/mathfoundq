@@ -1,13 +1,12 @@
 ---
 title: "Giovanni Bufalari"
-date: 2019-10-17T11:22:16+06:00
 images: 
   - "images/showcase/giovanni.png"
 
 # meta description
 description : "giovanni bufalari landing page"
-summary: M.Sc. student
-categories: student
+summary: Alumni
+categories: alumni
 draft: false
 ---
 

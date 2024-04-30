@@ -8,9 +8,29 @@ draft: false
 ---
 <!-- Each field should end with double spaces to properly break the line -->
 
+<br/> 
+
+# 2024
+
+## [Quantum non-classicality in the simplest causal network](https://arxiv.org/abs/2404.12790)
+**Authors:** Pedro Lauand, Davide Poderini, Rafael Rabelo, Rafael Chaves  
+**Published in:** Preprint  
+**Originally announced:** Apr 2024
+
+---
 
 
-# 2022-2023
+## [Observational-Interventional Bell Inequalities](https://arxiv.org/abs/2404.05015)
+**Authors:** Davide Poderini, Ranieri Nery, George Moreno, Santiago Zamora, Pedro Lauand, Rafael Chaves  
+**Published in:** Preprint  
+**Originally announced:** Apr 2024
+
+---
+
+
+<br/> 
+
+# 2023
 
 ## [Can multiple observers detect KS-contextuality?](https://arxiv.org/abs/2310.19564)
 **Authors:** Arthur C. R. Dutra, Roberto D. Baldijão, Marcelo Terra Cunha  
@@ -32,6 +52,10 @@ draft: false
 **Originally announced:** May 2023
 
 ---
+
+<br/> 
+
+# 2022
 
 ## [Witnessing Non-Classicality in a Simple Causal Structure with Three Observable Variables](https://arxiv.org/abs/2211.13349)
 **Authors:** Pedro Lauand, Davide Poderini, Ranieri Nery, George Moreno, Lucas Pollyceno, Rafael Rabelo, Rafael Chaves  
@@ -68,7 +92,7 @@ draft: false
 
 <br/> 
 
-# 2020-2021
+# 2021
 
 ## [Entanglement-based quantum communication complexity beyond Bell nonlocality](https://www.nature.com/articles/s41534-022-00520-8)  
 **Authors:** Joseph Ho, George Moreno, Samuraí Brito, Francesco Graffitti, Christopher L. Morrison, Ranieri Nery, Alexander Pickston, Massimiliano Proietti, Rafael Rabelo, Alessandro Fedrizzi, Rafael Chaves  
@@ -140,6 +164,10 @@ draft: false
 
 ---  
 
+<br/> 
+
+# 2020
+
 ## [Quantum Darwinism and the spreading of classical information in non-classical theories](https://quantum-journal.org/papers/q-2022-01-31-636/)  
 **Authors:** Roberto D. Baldijao, Marius Krumm, Andrew J. P. Garner, Markus P. Mueller  
 **Published in:** Quantum 6, 636 (2022)  
@@ -168,7 +196,7 @@ draft: false
 
 <br/>  
 
-# 2018-2019
+# 2019
 
 ## [Bounding the sets of classical and quantum correlations in networks](https://arxiv.org/abs/1904.08943)  
 **Authors:** Alejandro Pozas-Kerstjens, Rafael Rabelo, Łukasz Rudnicki, Rafael Chaves, Daniel Cavalcanti, Miguel Navascues, Antonio Acín  
@@ -183,6 +211,10 @@ draft: false
 **Dated:** Mar 2019  
 
 ---  
+
+<br/> 
+
+# 2018
 
 ## [Classical Limits and Contextuality in a Scenario of Multiple Observers](https://arxiv.org/abs/1811.00615)  
 **Authors:** Roberto D. Baldijao, Marcelo Terra Cunha  
@@ -205,7 +237,7 @@ draft: false
 
 <br/>  
 
-# 2016-2017
+# 2017
 
 ## [Uniqueness of the joint measurement and the structure of the set of compatible quantum measurements](https://arxiv.org/abs/1711.04804)  
 **Authors:** Leonardo Guerini, Marcelo Terra Cunha  
@@ -249,7 +281,7 @@ draft: false
 
 <br/>  
 
-# 2014-2015
+# 2015
 
 ## [General method for constructing local-hidden-variable models for entangled quantum states](https://arxiv.org/abs/1512.00277)  
 **Authors:** Daniel Cavalcanti, Leonardo Guerini, Rafael Rabelo, Paul Skrzypczyk  
@@ -286,6 +318,10 @@ draft: false
 
 ---  
 
+<br/> 
+
+# 2014
+
 ## [Multigraph approach to quantum non-locality](https://arxiv.org/abs/1407.5340)  
 **Authors:** Rafael Rabelo, Cristhiano Duarte, Antonio J. Lopez-Tarrida, Marcelo Terra Cunha, Adan Cabello  
 **Published in:** J. Phys. A: Math. Theor. 47 (2014) 424021  
@@ -300,7 +336,7 @@ draft: false
 
 <br/>  
 
-# 2012-2013
+# 2013
 
 ## [Simple Hardy-like proof of quantum contextuality](https://arxiv.org/abs/1310.8330)  
 **Authors:** Adan Cabello, Piotr Badziag, Marcelo Terra Cunha, Mohamed Bourennane  
@@ -330,6 +366,10 @@ draft: false
 
 ---  
 
+<br/> 
+
+# 2012
+
 ## [State-independent contextuality with identical particles](https://arxiv.org/abs/1212.5501)  
 **Authors:** Adan Cabello, Marcelo Terra Cunha  
 **Published in:** Phys. Rev. A 87 (2013) 022126  
@@ -358,7 +398,7 @@ draft: false
 
 <br/>  
 
-# 2010-2011
+# 2011
 
 ## [Tests of Bell inequality with arbitrarily low photodetection efficiency and homodyne measurements](https://arxiv.org/abs/1112.1719)  
 **Authors:** Mateus Araújo, Marco Túlio Quintino, Daniel Cavalcanti, Marcelo França Santos, Adán Cabello, Marcelo Terra Cunha  
@@ -394,6 +434,10 @@ draft: false
 **Originally announced:** May 2011  
 
 ---  
+
+<br/> 
+
+# 2010
 
 ## [Continuous Quantum Error Correction Through Local Operations](https://arxiv.org/abs/1009.4744)  
 **Authors:** Eduardo Mascarenhas, Breno Marques, Marcelo Terra Cunha, Marcelo França Santos  

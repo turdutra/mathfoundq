@@ -1,6 +1,5 @@
 ---
 title: "Rodrigo Ramos"
-date: 2024-04-21T11:22:16+06:00
 images: 
   - "images/showcase/rodrigo_ramos.png"
 
