@@ -9,7 +9,14 @@ description: "A collection of pictures from our research group's activities and 
 
 Welcome to our research group's photo gallery! Here, we share moments from our research activities, team meetings, and group events.
 
-## 2022-2023
+## 2024
+### **III Encontrinho**
+{{< image "encontrinho-2024.jpeg" >}}
+**Date:**  April 9, 2024 to April 10, 2023 &nbsp;
+**Location:** Campinas, SP, Brazil  
+**Description:** Our anual encontrinho, when we discuss the main research interests of our group.
+
+## 2023
 
 ### **VIII Paraty Quantum Information School and Workshop**
 {{< image "paraty-2023.jpeg" >}}

@@ -1,10 +1,10 @@
 ---
-title: "Sabrina Janeiro"
+title: "Sabrina Zani"
 images: 
   - "images/showcase/alice.png"
 
 # meta description
-description : "sabrina janeiro landing page"
+description : "sabrina zani landing page"
 summary: M.Sc. student
 categories: student
 draft: false
