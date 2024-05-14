@@ -12,6 +12,23 @@ draft: false
 
 # 2024
 
+## [Trade-off relations between Bell nonlocality and local Kochen-Specker contextuality in generalized Bell scenarios](https://arxiv.org/abs/2405.02964)
+**Authors:** Lucas E. A. Porto, Gabriel Ruffolo, Rafael Rabelo, Marcelo Terra Cunha, Pawel Kurzynski
+**Published in:** Preprint  
+**Originally announced:** May 2024
+
+---
+
+
+
+## [Characterizing randomness in parameterized quantum circuits through expressibility and average entanglement](https://arxiv.org/abs/2405.02265)
+**Authors:**  Guilherme Ilário Correr, Ivan Medina, Pedro C. Azado, Alexandre Drinko, Diogo O. Soares-Pinto
+**Published in:** Preprint  
+**Originally announced:** May 2024
+
+---
+
+
 ## [Quantum non-classicality in the simplest causal network](https://arxiv.org/abs/2404.12790)
 **Authors:** Pedro Lauand, Davide Poderini, Rafael Rabelo, Rafael Chaves  
 **Published in:** Preprint  
@@ -41,14 +58,14 @@ draft: false
 
 ## [The quantum maxima for the basic graphs of exclusivity are not reachable in Bell scenarios](https://arxiv.org/abs/2305.19247)
 **Authors:** Lucas E. A. Porto, Rafael Rabelo, Marcelo Terra Cunha, Adán Cabello  
-**Published in:** Philosophical Transactions of the Royal Society A  
+**Published in:**  Preprint
 **Originally announced:** May 2023
 
 ---
 
 ## [Wigner and friends, a map is not the territory! Contextuality in multi-agent paradoxes](https://arxiv.org/abs/2305.07792)
 **Authors:** Sidiney B. Montanhano  
-**Published in:** Preprint  
+**Published in:** Philosophical Transactions of the Royal Society A   
 **Originally announced:** May 2023
 
 ---
