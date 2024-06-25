@@ -12,8 +12,44 @@ draft: false
 
 # 2024
 
+
+
+
+## [Monogamy of nonlocality from multipartite information causality](https://arxiv.org/abs/2405.20115)
+**Authors:** Lucas Pollyceno, Anubhav Chaturvedi, Chithra Raj, Pedro R. Dieguez, Marcin Pawłowski  
+**Published in:** Preprint  
+**Originally announced:** May 2024
+
+---
+
+
+## [Causal Data Fusion with Quantum Confounders](https://arxiv.org/abs/2405.19278)
+**Authors:** Pedro Lauand, Bereket Ngussie Bekele, Elie Wolfe  
+**Published in:** Preprint  
+**Originally announced:** May 2024  
+
+---
+
+
+
+## [Quantum Non-classicality from Causal Data Fusion](https://arxiv.org/abs/2405.19252)
+**Authors:** Pedro Lauand, Bereket Ngussie Bekele, Elie Wolfe  
+**Published in:** Preprint  
+**Originally announced:** May 2024  
+
+---
+
+
+## [Optimal complexity of parameterized quantum circuits](https://arxiv.org/abs/2405.19252)
+**Authors:** Guilherme Ilário Correr,  Pedro C. Azado, Diogo O. Soares-Pinto and Gabriel Carlo  
+**Published in:** Preprint  
+**Originally announced:** May 2024
+
+---
+
+
 ## [Trade-off relations between Bell nonlocality and local Kochen-Specker contextuality in generalized Bell scenarios](https://arxiv.org/abs/2405.02964)
-**Authors:** Lucas E. A. Porto, Gabriel Ruffolo, Rafael Rabelo, Marcelo Terra Cunha, Pawel Kurzynski
+**Authors:** Lucas E. A. Porto, Gabriel Ruffolo, Rafael Rabelo, Marcelo Terra Cunha, Pawel Kurzynski  
 **Published in:** Preprint  
 **Originally announced:** May 2024
 
@@ -22,7 +58,7 @@ draft: false
 
 
 ## [Characterizing randomness in parameterized quantum circuits through expressibility and average entanglement](https://arxiv.org/abs/2405.02265)
-**Authors:**  Guilherme Ilário Correr, Ivan Medina, Pedro C. Azado, Alexandre Drinko, Diogo O. Soares-Pinto
+**Authors:**  Guilherme Ilário Correr, Ivan Medina, Pedro C. Azado, Alexandre Drinko, Diogo O. Soares-Pinto   
 **Published in:** Preprint  
 **Originally announced:** May 2024
 
@@ -56,16 +92,16 @@ draft: false
 
 ---
 
-## [The quantum maxima for the basic graphs of exclusivity are not reachable in Bell scenarios](https://arxiv.org/abs/2305.19247)
+## [The quantum maxima for the basic graphs of exclusivity are not reachable in Bell scenarios](https://royalsocietypublishing.org/doi/10.1098/rsta.2023.0006)
 **Authors:** Lucas E. A. Porto, Rafael Rabelo, Marcelo Terra Cunha, Adán Cabello  
-**Published in:**  Preprint
+**Published in:**  Philosophical Transactions of the Royal Society A   
 **Originally announced:** May 2023
 
 ---
 
 ## [Wigner and friends, a map is not the territory! Contextuality in multi-agent paradoxes](https://arxiv.org/abs/2305.07792)
 **Authors:** Sidiney B. Montanhano  
-**Published in:** Philosophical Transactions of the Royal Society A   
+**Published in:** Preprint  
 **Originally announced:** May 2023
 
 ---
@@ -113,7 +149,7 @@ draft: false
 
 ## [Entanglement-based quantum communication complexity beyond Bell nonlocality](https://www.nature.com/articles/s41534-022-00520-8)  
 **Authors:** Joseph Ho, George Moreno, Samuraí Brito, Francesco Graffitti, Christopher L. Morrison, Ranieri Nery, Alexander Pickston, Massimiliano Proietti, Rafael Rabelo, Alessandro Fedrizzi, Rafael Chaves  
-**Published in:** npj Quantum Inf 8, 13 (2022)  
+**Published in:** npj Quantum Information  
 **Originally announced:** Jun 2021  
 
 ---
@@ -263,9 +299,9 @@ draft: false
 
 ---  
 
-## [On geometrical aspects of the graph approach to contextuality](https://arxiv.org/abs/1709.04812)  
+## [On geometrical aspects of the graph approach to contextuality](https://royalsocietypublishing.org/doi/full/10.1098/rsta.2023.0008)  
 **Authors:** Barbara Amaral, Marcelo Terra Cunha  
-**Published in:** Preprint  
+**Published in:** Philosophical Transactions of the Royal Society A  
 **Dated:** Sep 2017  
 
 ---  
