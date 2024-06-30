@@ -1,7 +1,7 @@
 ---
 title: "John Alexander Mora"
 images: 
-  - "images/showcase/bob.png"
+  - "images/showcase/john_alexander.png"
 
 # meta description
 description : "john alexander landing page"

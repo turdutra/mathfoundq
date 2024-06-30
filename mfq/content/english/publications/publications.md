@@ -40,7 +40,7 @@ draft: false
 ---
 
 
-## [Optimal complexity of parameterized quantum circuits](https://arxiv.org/abs/2405.19252)
+## [Optimal complexity of parameterized quantum circuits](https://arxiv.org/abs/2405.19537)
 **Authors:** Guilherme Ilário Correr,  Pedro C. Azado, Diogo O. Soares-Pinto and Gabriel Carlo  
 **Published in:** Preprint  
 **Originally announced:** May 2024
