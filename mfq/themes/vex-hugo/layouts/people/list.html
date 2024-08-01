@@ -7,27 +7,27 @@
       <div class="col-12 text-center mb-5">
         <h1>Group Leaders</h1>
       </div>
-      <!-- Phantom block to center leaders -->
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4"><div class="block"></div></div> 
-      {{ range (where .Site.RegularPages "Section" "people") }}
-      {{ if eq .Params.categories "leader" }}
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="block">
-          <div class="gallery-overlay">
-            <a href="{{ .Permalink }}" class="gallery-popup">
-              <i class="tf-ion-plus-round"></i>
-            </a>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        {{ range (where .Site.RegularPages "Section" "people") }}
+        {{ if eq .Params.categories "leader" }}
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4" style="flex: 1 0 25%; max-width: 25%; box-sizing: border-box;">
+          <div class="block">
+            <div class="gallery-overlay">
+              <a href="{{ .Permalink }}" class="gallery-popup">
+                <i class="tf-ion-plus-round"></i>
+              </a>
+            </div>
+            <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
           </div>
-          <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
+          <div class="product-info">
+            <p style="margin-bottom:.2cm;"></p>
+            <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
+            <p class="price">{{.Params.summary}}</p>
+          </div>
         </div>
-        <div class="product-info">
-          <p style="margin-bottom:.2cm;"></p>
-          <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
-          <p class="price">{{.Params.summary}}</p>
-        </div>
+        {{ end }}
+        {{ end }}
       </div>
-      {{ end }}
-      {{ end }}
     </div>
   </div>
 </section>
@@ -39,25 +39,27 @@
       <div class="col-12 text-center mb-5">
         <h1>Researchers</h1>
       </div>
-      {{ range (where .Site.RegularPages "Section" "people") }}
-      {{ if eq .Params.categories "researcher" }}
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="block">
-          <div class="gallery-overlay">
-            <a href="{{ .Permalink }}" class="gallery-popup">
-              <i class="tf-ion-plus-round"></i>
-            </a>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        {{ range (where .Site.RegularPages "Section" "people") }}
+        {{ if eq .Params.categories "researcher" }}
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4" style="flex: 1 0 25%; max-width: 25%; box-sizing: border-box;">
+          <div class="block">
+            <div class="gallery-overlay">
+              <a href="{{ .Permalink }}" class="gallery-popup">
+                <i class="tf-ion-plus-round"></i>
+              </a>
+            </div>
+            <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
           </div>
-          <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
+          <div class="product-info">
+            <p style="margin-bottom:.2cm;"></p>
+            <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
+            <p class="price">{{.Params.summary}}</p>
+          </div>
         </div>
-        <div class="product-info">
-          <p style="margin-bottom:.2cm;"></p>
-          <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
-          <p class="price">{{.Params.summary}}</p>
-        </div>
+        {{ end }}
+        {{ end }}
       </div>
-      {{ end }}
-      {{ end }}
     </div>
   </div>
 </section>
@@ -69,25 +71,27 @@
       <div class="col-12 text-center mb-5">
         <h1>Students</h1>
       </div>
-      {{ range (where .Site.RegularPages "Section" "people") }}
-      {{ if eq .Params.categories "student" }}
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="block">
-          <div class="gallery-overlay">
-            <a href="{{ .Permalink }}" class="gallery-popup">
-              <i class="tf-ion-plus-round"></i>
-            </a>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        {{ range (where .Site.RegularPages "Section" "people") }}
+        {{ if eq .Params.categories "student" }}
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4" style="flex: 1 0 25%; max-width: 25%; box-sizing: border-box;">
+          <div class="block">
+            <div class="gallery-overlay">
+              <a href="{{ .Permalink }}" class="gallery-popup">
+                <i class="tf-ion-plus-round"></i>
+              </a>
+            </div>
+            <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
           </div>
-          <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
+          <div class="product-info">
+            <p style="margin-bottom:.2cm;"></p>
+            <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
+            <p class="price">{{.Params.summary}}</p>
+          </div>
         </div>
-        <div class="product-info">
-          <p style="margin-bottom:.2cm;"></p>
-          <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
-          <p class="price">{{.Params.summary}}</p>
-        </div>
+        {{ end }}
+        {{ end }}
       </div>
-      {{ end }}
-      {{ end }}
     </div>
   </div>
 </section>
@@ -99,25 +103,27 @@
       <div class="col-12 text-center mb-5">
         <h1>Alumni</h1>
       </div>
-      {{ range (where .Site.RegularPages "Section" "people") }}
-      {{ if eq .Params.categories "alumni" }}
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="block">
-          <div class="gallery-overlay">
-            <a href="{{ .Permalink }}" class="gallery-popup">
-              <i class="tf-ion-plus-round"></i>
-            </a>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        {{ range (where .Site.RegularPages "Section" "people") }}
+        {{ if eq .Params.categories "alumni" }}
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4" style="flex: 1 0 25%; max-width: 25%; box-sizing: border-box;">
+          <div class="block">
+            <div class="gallery-overlay">
+              <a href="{{ .Permalink }}" class="gallery-popup">
+                <i class="tf-ion-plus-round"></i>
+              </a>
+            </div>
+            <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
           </div>
-          <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
+          <div class="product-info">
+            <p style="margin-bottom:.2cm;"></p>
+            <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
+            <p class="price">{{.Params.summary}}</p>
+          </div>
         </div>
-        <div class="product-info">
-          <p style="margin-bottom:.2cm;"></p>
-          <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
-          <p class="price">{{.Params.summary}}</p>
-        </div>
+        {{ end }}
+        {{ end }}
       </div>
-      {{ end }}
-      {{ end }}
     </div>
   </div>
 </section>
