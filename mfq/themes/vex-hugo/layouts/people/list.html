@@ -7,10 +7,10 @@
       <div class="col-12 text-center mb-5">
         <h1>Group Leaders</h1>
       </div>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <div class="row justify-content-center"> <!-- Updated flexbox alignment -->
         {{ range (where .Site.RegularPages "Section" "people") }}
         {{ if eq .Params.categories "leader" }}
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4" style="flex: 1 0 25%; max-width: 25%; box-sizing: border-box;">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
           <div class="block">
             <div class="gallery-overlay">
               <a href="{{ .Permalink }}" class="gallery-popup">
@@ -39,10 +39,10 @@
       <div class="col-12 text-center mb-5">
         <h1>Researchers</h1>
       </div>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <div class="row justify-content-center"> <!-- Updated flexbox alignment -->
         {{ range (where .Site.RegularPages "Section" "people") }}
         {{ if eq .Params.categories "researcher" }}
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4" style="flex: 1 0 25%; max-width: 25%; box-sizing: border-box;">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
           <div class="block">
             <div class="gallery-overlay">
               <a href="{{ .Permalink }}" class="gallery-popup">
@@ -71,10 +71,10 @@
       <div class="col-12 text-center mb-5">
         <h1>Students</h1>
       </div>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <div class="row justify-content-center"> <!-- Updated flexbox alignment -->
         {{ range (where .Site.RegularPages "Section" "people") }}
         {{ if eq .Params.categories "student" }}
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4" style="flex: 1 0 25%; max-width: 25%; box-sizing: border-box;">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
           <div class="block">
             <div class="gallery-overlay">
               <a href="{{ .Permalink }}" class="gallery-popup">
@@ -103,10 +103,10 @@
       <div class="col-12 text-center mb-5">
         <h1>Alumni</h1>
       </div>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <div class="row justify-content-center"> <!-- Updated flexbox alignment -->
         {{ range (where .Site.RegularPages "Section" "people") }}
         {{ if eq .Params.categories "alumni" }}
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4" style="flex: 1 0 25%; max-width: 25%; box-sizing: border-box;">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
           <div class="block">
             <div class="gallery-overlay">
               <a href="{{ .Permalink }}" class="gallery-popup">

@@ -1,7 +1,7 @@
 ---
 title: "Leonardo Trimarco"
 images: 
-  - "images/showcase/bob.png"
+  - "images/showcase/leonardo_trimarco.png"
 
 # meta description
 description : "Leonardo Trimarco landing page"

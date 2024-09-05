@@ -1,7 +1,7 @@
 ---
 title: "Gustavo Kerdole"
 images: 
-  - "images/showcase/bob.png"
+  - "images/showcase/gustavo_kerdole.png"
 
 # meta description
 description : "gustavo kerdole landing page"
