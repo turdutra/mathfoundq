@@ -9,3 +9,5 @@ summary: M.Sc. student
 categories: student
 draft: false
 ---
+
+Masters' student.

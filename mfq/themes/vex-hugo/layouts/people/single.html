@@ -1,24 +1,44 @@
 {{ define "main" }}
-
 <section class="section">
   <div class="container">
+    <!-- Existing content -->
     <div class="row">
       <div class="col-md-5 mb-4 mb-md-0">
-        <!-- product image slider -->
-<!--         <div class="product-image-slider">
-          {{ range .Params.images }} -->
-          <div data-image="{{ . | absURL }}">
-            <img class="img-fluid w-100" src="{{ . | absURL }}" alt="product-image">
-          </div>
-<!--           {{ end }}
-        </div> -->
+        <!-- Person's image -->
+        {{ if .Params.images }}
+        <img class="img-fluid w-100" src="{{ index .Params.images 0 | absURL }}" alt="{{ .Title }}">
+        {{ end }}
       </div>
       <div class="col-lg-6 col-md-7 offset-lg-1">
         <h1 class="mb-4">{{ .Title }}</h1>
-        <div class="content">{{.Content}}</div>
+        <div class="content">{{ .Content }}</div>
       </div>
     </div>
+
+    <!-- Publications Section -->
+    {{ $author := .Params.author_name | default .Title }}
+    {{ $publications := where $.Site.Data.publications.publications "authors" "intersect" (slice $author) }}
+
+    <!-- Only display the publications section if there are publications for the author -->
+    {{ if gt (len $publications) 0 }}
+    <div class="row mt-5">
+      <div class="col-12">
+        <h2>Publications</h2>
+        {{ range $publications }}
+          <h3><a href="{{ .link }}">{{ .title }}</a></h3>
+          <p><strong>Authors:</strong> {{ delimit .authors ", " }}</p>
+          <p><strong>Published in:</strong> {{ .published_in }}</p>
+          {{ if .originally_announced }}
+            <p><strong>Originally announced:</strong> {{ .originally_announced }}</p>
+          {{ else if .date }}
+            <p><strong>Date:</strong> {{ dateFormat "Jan 2006" .date }}</p>
+          {{ end }}
+          <hr>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
   </div>
 </section>
-
 {{ end }}

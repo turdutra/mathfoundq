@@ -11,19 +11,22 @@
 
         <div class="product-slider">
           {{ range (shuffle (where .Site.RegularPages "Section" "people")) }}
-          <div class="block">
-            <div class="slider-gallery-overlay">
-              <a href="{{ .Permalink }}" class="slider-gallery-popup">
-                <i class="tf-ion-plus-round"></i>
-              </a>
+            {{ $img := index .Params.images 0 }}
+            {{ if and (not (in $img "alice.png")) (not (in $img "bob.png")) (not (in .Params.categories "alumni")) }}
+            <div class="block" data-category="{{ .Params.categories }}">
+              <div class="slider-gallery-overlay">
+                <a href="{{ .Permalink }}" class="slider-gallery-popup">
+                  <i class="tf-ion-plus-round"></i>
+                </a>
+              </div>
+              <img class="img-fluid" src="{{ $img | absURL }}" alt="{{ .Title }}">
+              <div class="product-info">
+                <p style="margin-bottom:.5cm;"></p>
+                <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
+                <p class="price">{{.Params.summary}}</p>
+              </div>
             </div>
-            <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
-            <div class="product-info">
-              <p style="margin-bottom:.5cm;"></p>
-              <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
-              <p class="price">{{.Params.summary}}</p>
-            </div>
-          </div>
+            {{ end }}
           {{ end }}
         </div>
       </div>
@@ -31,3 +34,4 @@
   </div>
 </section>
 {{ end }}
+

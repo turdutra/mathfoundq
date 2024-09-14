@@ -2,17 +2,44 @@
 
 <section class="section">
   <div class="container">
-      {{ range (where .Site.RegularPages "Section" "publications") }}
+    <!-- Page Title -->
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h1>Our Recent Publications</h1>
+      </div>
+    </div>
+    <div class="content">
+      {{ $publications := sort .Site.Data.publications.publications "date" "desc" }}
+      {{ $currentYear := "" }}
+      {{ range $pub := $publications }}
+        {{ $pubYear := dateFormat "2006" $pub.date }}
+        {{ if ne $currentYear $pubYear }}
+          {{ if ne $currentYear "" }}
+            <br/>
+          {{ end }}
+          <!-- Year Heading -->
+          <div class="row">
+            <div class="col-12">
+              <h1>{{ $pubYear }}</h1>
+            </div>
+          </div>
+          {{ $currentYear = $pubYear }}
+        {{ end }}
+        <!-- Publication Entry -->
         <div class="row">
-          <div class="col-12 text-center mb-5">
-            <h1>{{.Title}}</h1>
+          <div class="col-12">
+            <h2><a href="{{ $pub.link }}">{{ $pub.title }}</a></h2>
+            <p><strong>Authors:</strong> {{ delimit $pub.authors ", " }}</p>
+            <p><strong>Published in:</strong> {{ $pub.published_in }}</p>
+            {{ if $pub.originally_announced }}
+              <p><strong>Originally announced:</strong> {{ $pub.originally_announced }}</p>
+            {{ else if $pub.date }}
+              <p><strong>Date:</strong> {{ dateFormat "Jan 2006" $pub.date }}</p>
+            {{ end }}
+            <hr>
           </div>
         </div>
-        <div class="content">
-          {{.Content}}
-        </div>
-        {{ end }}
-      </div>
+      {{ end }}
     </div>
   </div>
 </section>
