@@ -1,4 +1,14 @@
 publications:
+  - title: Characterizing Optimal-speed unitary time evolution of pure and quasi-pure quantum states
+    link: https://arxiv.org/abs/2408.07794
+    authors:
+    - John A. Mora Rodríguez
+    - Brian Grajales
+    - Marcelo Terra Cunha
+    - Lino Grama
+    published_in: Preprint
+    date: '2024-08-14'
+
   - title: Monogamy of nonlocality from multipartite information causality
     link: https://arxiv.org/abs/2405.20115
     authors:
@@ -33,15 +43,15 @@ publications:
     date: '2024-01-01'
   - title: Trade-off relations between Bell nonlocality and local Kochen-Specker contextuality
       in generalized Bell scenarios
-    link: https://arxiv.org/abs/2405.02964
+    link: https://iopscience.iop.org/article/10.1088/1367-2630/ad7167
     authors:
     - Lucas E. A. Porto
     - Gabriel Ruffolo
     - Rafael Rabelo
     - Marcelo Terra Cunha
     - Pawel Kurzynski
-    published_in: Preprint
-    date: '2024-01-01'
+    published_in: New Journal of Physics
+    date: '2024-08-30'
   - title: Characterizing randomness in parameterized quantum circuits through expressibility
       and average entanglement
     link: https://arxiv.org/abs/2405.02265

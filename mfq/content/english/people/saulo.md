@@ -1,5 +1,5 @@
 ---
-title: "Saulo Moreira"
+title: "Saulo V. Moreira"
 images: 
   - "images/showcase/saulo.png"
 

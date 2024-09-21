@@ -1,5 +1,5 @@
 ---
-title: "André Saugo Mazzari"
+title: "André Mazzari"
 images: 
   - "images/showcase/andre.png"
 

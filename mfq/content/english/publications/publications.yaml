@@ -1,4 +1,5 @@
 publications:
+
   - title: Monogamy of nonlocality from multipartite information causality
     link: https://arxiv.org/abs/2405.20115
     authors:
@@ -9,6 +10,7 @@ publications:
     - Marcin Pawłowski
     published_in: Preprint
     date: '2024-01-01'
+
   - title: Causal Data Fusion with Quantum Confounders
     link: https://arxiv.org/abs/2405.19278
     authors:
@@ -17,6 +19,7 @@ publications:
     - Elie Wolfe
     published_in: Preprint
     date: '2024-05-01'
+
   - title: Quantum Non-classicality from Causal Data Fusion
     link: https://arxiv.org/abs/2405.19252
     authors:
@@ -31,17 +34,9 @@ publications:
     - Guilherme Ilário Correr
     published_in: Preprint
     date: '2024-01-01'
-  - title: Trade-off relations between Bell nonlocality and local Kochen-Specker contextuality
-      in generalized Bell scenarios
-    link: https://arxiv.org/abs/2405.02964
-    authors:
-    - Lucas E. A. Porto
-    - Gabriel Ruffolo
-    - Rafael Rabelo
-    - Marcelo Terra Cunha
-    - Pawel Kurzynski
-    published_in: Preprint
-    date: '2024-01-01'
+
+  
+
   - title: Characterizing randomness in parameterized quantum circuits through expressibility
       and average entanglement
     link: https://arxiv.org/abs/2405.02265

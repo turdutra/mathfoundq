@@ -1,5 +1,5 @@
 ---
-title: "John Alexander Mora"
+title: "John A. Mora Rodríguez"
 images: 
   - "images/showcase/john_alexander.png"
 

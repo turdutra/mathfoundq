@@ -1,5 +1,5 @@
 ---
-title: "Carlos Humberto Vieira"
+title: "Carlos Vieira"
 images: 
   - "images/showcase/humberto.png"
 

@@ -10,9 +10,17 @@ description: "A collection of pictures from our research group's activities and 
 Welcome to our research group's photo gallery! Here, we share moments from our research activities, team meetings, and group events.
 
 ## 2024
+### **Group Meeting 2024s2**
+{{< image "reunião-2024-2.jpg" >}}
+**Date:**  September 2, 2024 &nbsp;
+**Location:** Campinas, SP, Brazil  
+**Description:** Restarting our group meetings in the new semester!
+
+
+
 ### **III Encontrinho**
 {{< image "encontrinho-2024.jpeg" >}}
-**Date:**  April 9, 2024 to April 10, 2023 &nbsp;
+**Date:**  April 9, 2024 to April 10, 2024 &nbsp;
 **Location:** Campinas, SP, Brazil  
 **Description:** Our anual encontrinho, when we discuss the main research interests of our group.
 

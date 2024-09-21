@@ -1,5 +1,5 @@
 ---
-title: "Arthur Dutra"
+title: "Arthur C. R. Dutra"
 images: 
   - "images/showcase/arthur.png"
 

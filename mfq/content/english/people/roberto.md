@@ -1,5 +1,5 @@
 ---
-title: "Roberto Dobal Baldijão"
+title: "Roberto D. Baldijão"
 images: 
   - "images/showcase/roberto.png"
 

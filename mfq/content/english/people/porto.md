@@ -1,5 +1,5 @@
 ---
-title: "Lucas Emanuel Antunes Porto"
+title: "Lucas E. A. Porto"
 images: 
   - "images/showcase/porto.png"
 

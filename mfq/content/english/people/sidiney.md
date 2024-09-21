@@ -1,5 +1,5 @@
 ---
-title: "Sidiney Montanhano"
+title: "Sidiney B. Montanhano"
 images: 
   - "images/showcase/sidiney.png"
 
