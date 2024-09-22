@@ -1,43 +1,31 @@
+function preloadImages(array) {
+  if (!preloadImages.list) {
+    preloadImages.list = [];
+  }
+  var list = preloadImages.list;
+  for (var i = 0; i < array.length; i++) {
+    var img = new Image();
+    img.src = array[i];
+    list.push(img);
+  }
+}
+
 $(document).ready(function () {
   $('.preloader').fadeOut(100);
 
-  // Function to randomize and filter slides
-  function randomizeAndFilterSlides(sliderElement, excludeAlumni = true) {
-    var slides = sliderElement.children().toArray();
-    slides.sort(function() { return 0.5 - Math.random(); }); // Randomize the array
+  var $meetUsSlider = $('#meet-us-slider');
+  var $mfqWorldSlider = $('#mfq-world-slider');
 
-    slides.forEach(function(slide) {
-      var imgSrc = $(slide).find('img').attr('src');
-      var category = $(slide).data('category');
-      
-      // Filter based on category, excluding alumni if excludeAlumni is true
-      if (excludeAlumni && !imgSrc.endsWith('alice.png') && !imgSrc.endsWith('bob.png') && category !== 'alumni') {
-        sliderElement.append(slide);
-      } else if (!excludeAlumni && category === 'alumni') {
-        sliderElement.append(slide); // Only include alumni in this case
-      } else {
-        $(slide).remove();
-      }
-    });
-  }
-
-  // Select the sliders
-  var $productSlider = $('.product-slider');
-  var $alumniSlider = $('.alumni-slider');
-
-  // Randomize and filter slides
-  randomizeAndFilterSlides($productSlider);
-  randomizeAndFilterSlides($alumniSlider, false); // Alumni slider should include only alumni
-
-  // Initialize product slider
-  $productSlider.slick({
+  // Initialize the "Meet Us" slider (Visible by default)
+  $meetUsSlider.slick({
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     dots: false,
     arrows: false,
-    responsive: [{
+    responsive: [
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3
@@ -58,15 +46,16 @@ $(document).ready(function () {
     ]
   });
 
-  // Initialize alumni slider
-  $alumniSlider.slick({
+  // Initialize the "MFQ Around the World" slider (Hidden by default)
+  $mfqWorldSlider.slick({
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     dots: false,
     arrows: false,
-    responsive: [{
+    responsive: [
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3
@@ -86,4 +75,42 @@ $(document).ready(function () {
       }
     ]
   });
+
+  // Initially hide the MFQ World slider
+  $mfqWorldSlider.hide();
+
+  // Click event for "Meet Us" link
+  $('#meet-us-link').on('click', function () {
+    // Show the Meet Us slider and hide the MFQ Around the World slider
+    $mfqWorldSlider.hide();
+    $meetUsSlider.show();
+
+    // Update text link states
+    $('#meet-us-link').removeClass('faded').addClass('active');
+    $('#mfq-world-link').removeClass('active').addClass('faded');
+  });
+
+  // Click event for "MFQ Around the World" link
+  $('#mfq-world-link').on('click', function () {
+    // Show the MFQ Around the World slider and hide the Meet Us slider
+    $meetUsSlider.hide();
+    $mfqWorldSlider.show();
+
+    // Update text link states
+    $('#mfq-world-link').removeClass('faded').addClass('active');
+    $('#meet-us-link').removeClass('active').addClass('faded');
+  });
+
+  var imageUrls = [];
+
+  $('#meet-us-slider img').each(function () {
+    imageUrls.push($(this).attr('src'));
+  });
+
+  $('#mfq-world-slider img').each(function () {
+    imageUrls.push($(this).attr('src'));
+  });
+
+  // Preload all images
+  preloadImages(imageUrls);
 });

@@ -699,3 +699,29 @@ textarea.form-control {
     color: $primary-color;
   }
 }
+
+#mfq-world-slider {
+  display: none; /* Hidden by default */
+}
+
+.toggle-text {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px; /* Adjust this to the desired title size */
+  font-weight: 700; /* Make the text bold to stand out */
+}
+
+.toggle-text a {
+  text-decoration: none;
+  color: #3b4045; /* Normal font color for the active link */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.toggle-text a.faded {
+  color: #d8d7d7; /* Faded font color */
+}
+
+.toggle-text a:hover {
+  text-decoration: underline; /* Underline on hover to indicate it's clickable */
+}

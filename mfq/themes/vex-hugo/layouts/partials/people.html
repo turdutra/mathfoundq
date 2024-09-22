@@ -1,15 +1,15 @@
-{{ $data := index .Site.Data .Site.Language.Lang }}
-
-{{ if $data.homepage.products.enable }}
-<section class="slider-gallery" id="people">
+<section class="slider-gallery" id="people-section">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="heading">
-          <h2>{{ $data.homepage.products.title | markdownify }}</h2>
+        <!-- Buttons to toggle sliders -->
+        <div class="toggle-text">
+          <a href="javascript:void(0);" id="meet-us-link" class="active">Meet Us</a> | 
+          <a href="javascript:void(0);" id="mfq-world-link" class="faded">MFQ Around the World</a>
         </div>
 
-        <div class="product-slider">
+        <!-- Meet Us Slider (default visible) -->
+        <div class="product-slider" id="meet-us-slider">
           {{ range (shuffle (where .Site.RegularPages "Section" "people")) }}
             {{ $img := index .Params.images 0 }}
             {{ if and (not (in $img "alice.png")) (not (in $img "bob.png")) (not (in .Params.categories "alumni")) }}
@@ -29,22 +29,9 @@
             {{ end }}
           {{ end }}
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
 
-<!-- Alumni Slider: MFQ AROUND THE WORLD -->
-<section class="slider-gallery" id="alumni">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="heading">
-          <h2>MFQ Around the World</h2>
-        </div>
-
-        <div class="alumni-slider">
+        <!-- Alumni Slider (hidden by default) -->
+        <div class="alumni-slider" id="mfq-world-slider" style="display:none;">
           {{ range (shuffle (where (where .Site.RegularPages "Section" "people") ".Params.categories" "alumni")) }}
             {{ $img := index .Params.images 0 }}
             <div class="block" data-category="alumni">
