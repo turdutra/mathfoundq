@@ -35,3 +35,34 @@
 </section>
 {{ end }}
 
+<!-- Alumni Slider: MFQ AROUND THE WORLD -->
+<section class="slider-gallery" id="alumni">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading">
+          <h2>MFQ Around the World</h2>
+        </div>
+
+        <div class="alumni-slider">
+          {{ range (shuffle (where (where .Site.RegularPages "Section" "people") ".Params.categories" "alumni")) }}
+            {{ $img := index .Params.images 0 }}
+            <div class="block" data-category="alumni">
+              <div class="slider-gallery-overlay">
+                <a href="{{ .Permalink }}" class="slider-gallery-popup">
+                  <i class="tf-ion-plus-round"></i>
+                </a>
+              </div>
+              <img class="img-fluid" src="{{ $img | absURL }}" alt="{{ .Title }}">
+              <div class="product-info">
+                <p style="margin-bottom:.5cm;"></p>
+                <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
+                <p class="price">{{.Params.summary}}</p>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
