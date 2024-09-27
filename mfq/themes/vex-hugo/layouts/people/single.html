@@ -23,7 +23,7 @@
     {{ if gt (len $publications) 0 }}
     <div class="row mt-5">
       <div class="col-12">
-        <h2 style="margin-bottom: 15px;">Publications</h2>
+        <h2 style="margin-bottom: 15px;">MFQ Publications</h2>
         {{ range $publications }}
           <h3><a href="{{ .link }}">{{ .title }}</a></h3>
           <p><strong>Authors:</strong> {{ delimit .authors ", " }}</p>
