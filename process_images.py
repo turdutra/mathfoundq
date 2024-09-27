@@ -130,28 +130,76 @@ class ImageCropper:
         self.group_canvas.bind("<B1-Motion>", self.drag_group_image)
 
     def load_image(self):
-        """Load an image from a file."""
+        """Load a personal image from a file."""
         file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.jpg *.jpeg *.png *.webp")])
         if not file_path:
             return
-        self.image = Image.open(file_path)
+        self.image = Image.open(file_path).convert("RGB")  # Ensure RGB mode
         self.image_original = self.image.copy()  # Keep a copy of the original image
 
+        # Extract the filename (without extension) from the file path
+        self.image_filename = os.path.splitext(os.path.basename(file_path))[0]
+
         # Reset scaling and position
-        self.scale_factor = 1.0
-        self.scale.set(self.scale_factor)
         self.img_x = 0
         self.img_y = 0
 
+        # Adjust the scale factor to fit the height of the image to the canvas height
+        image_height = self.image.height
+        self.scale_factor = min(self.canvas_height / image_height, 2.0)  # Constrain to max scale factor
+        self.scale.set(self.scale_factor)  # Update the slider value
+
         self.update_image()
+
+    def process_group_image(self):
+        """Process and save the group image with correct DPI."""
+        if not self.group_image:
+            messagebox.showerror("Error", "No group image loaded!")
+            return
+
+        # Use the original image to prevent cumulative resizing
+        original_image = self.group_image_original.copy()
+
+        # If scaling is applied, resize the original image accordingly
+        if self.scale_factor_group != 1.0:
+            img_width = int(original_image.width * self.scale_factor_group)
+            img_height = int(original_image.height * self.scale_factor_group)
+            resized_img = original_image.resize((img_width, img_height), Image.LANCZOS)
+        else:
+            resized_img = original_image
+
+        # Create a blank output image
+        output_image = Image.new("RGB", (self.output_width_group, self.output_height_group), "white")
+
+        # Paste the resized image onto the output image at the calculated position
+        output_image.paste(resized_img, (int(self.img_x_group), int(self.img_y_group)))
+
+        if self.metadata_var_group.get():
+            output_image = self.remove_metadata(output_image)
+
+        if self.round_var_group.get():
+            output_image = self.round_corners(output_image, radius=100)
+
+        # Pre-fill the save dialog with the original filename and ".webp" extension
+        default_filename = f"{self.group_image_filename}.webp"
+        save_path = filedialog.asksaveasfilename(defaultextension=".webp", initialfile=default_filename, filetypes=[("WEBP", "*.webp")])
+
+        if save_path:
+            output_image.save(save_path, "WEBP", quality=95)
+            messagebox.showinfo("Saved", f"Group image saved to {save_path}")
+
+
 
     def load_group_image(self):
         """Load a group image from a file."""
         file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.jpg *.jpeg *.png *.webp")])
         if not file_path:
             return
-        self.group_image = Image.open(file_path)
-        self.group_image_original = self.group_image.copy()  # Keep a copy of the original image
+        self.group_image = Image.open(file_path).convert("RGB")  # Ensure RGB mode
+        self.group_image_original = self.group_image.copy()
+
+        # Extract the filename (without extension) from the file path
+        self.group_image_filename = os.path.splitext(os.path.basename(file_path))[0]
 
         # Reset scaling and position
         self.scale_factor_group = 1.0
@@ -281,13 +329,19 @@ class ImageCropper:
             messagebox.showerror("Error", "No image loaded!")
             return
 
+        # Use the original image to prevent cumulative resizing
+        original_image = self.image_original.copy()
+
+        # If scaling is applied, resize the original image accordingly
+        if self.scale_factor != 1.0:
+            img_width = int(original_image.width * self.scale_factor)
+            img_height = int(original_image.height * self.scale_factor)
+            resized_img = original_image.resize((img_width, img_height), Image.LANCZOS)
+        else:
+            resized_img = original_image
+
         # Create a blank output image
         output_image = Image.new("RGB", (self.output_width, self.output_height), "white")
-
-        # Resize the image according to the scale factor
-        img_width = int(self.image.width * self.scale_factor)
-        img_height = int(self.image.height * self.scale_factor)
-        resized_img = self.image.resize((img_width, img_height), Image.LANCZOS)
 
         # Paste the resized image onto the output image at the calculated position
         output_image.paste(resized_img, (int(self.img_x), int(self.img_y)))
@@ -298,38 +352,37 @@ class ImageCropper:
         if self.round_var.get():
             output_image = self.round_corners(output_image)
 
-        save_path = filedialog.asksaveasfilename(defaultextension=".webp", filetypes=[("WEBP", "*.webp")])
+        # Pre-fill the save dialog with the original filename and ".webp" extension
+        default_filename = f"{self.image_filename}.webp"
+        save_path = filedialog.asksaveasfilename(defaultextension=".webp", initialfile=default_filename, filetypes=[("WEBP", "*.webp")])
+
         if save_path:
             output_image.save(save_path, "WEBP", quality=95, dpi=(96, 96))
             messagebox.showinfo("Saved", f"Image saved to {save_path}")
 
-    def process_group_image(self):
-        """Process and save the group image with correct DPI."""
-        if not self.group_image:
-            messagebox.showerror("Error", "No group image loaded!")
+
+    def load_group_image(self):
+        """Load a group image from a file."""
+        file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.jpg *.jpeg *.png *.webp")])
+        if not file_path:
             return
+        self.group_image = Image.open(file_path).convert("RGB")  # Ensure RGB mode
+        self.group_image_original = self.group_image.copy()  # Keep a copy of the original image
 
-        # Create a blank output image
-        output_image = Image.new("RGB", (self.output_width_group, self.output_height_group), "white")
+        # Extract the filename (without extension) from the file path
+        self.group_image_filename = os.path.splitext(os.path.basename(file_path))[0]
 
-        # Resize the image according to the scale factor
-        img_width = int(self.group_image.width * self.scale_factor_group)
-        img_height = int(self.group_image.height * self.scale_factor_group)
-        resized_img = self.group_image.resize((img_width, img_height), Image.LANCZOS)
+        # Reset scaling and position
+        self.img_x_group = 0
+        self.img_y_group = 0
 
-        # Paste the resized image onto the output image at the calculated position
-        output_image.paste(resized_img, (int(self.img_x_group), int(self.img_y_group)))
+        # Adjust the scale factor to fit the height of the image to the canvas height
+        image_height = self.group_image.height
+        self.scale_factor_group = min(self.canvas_height_group / image_height, 2.0)  # Constrain to max scale factor
+        self.group_scale.set(self.scale_factor_group)  # Update the slider value
 
-        if self.metadata_var_group.get():
-            output_image = self.remove_metadata(output_image)
+        self.update_group_image()
 
-        if self.round_var_group.get():
-            output_image = self.round_corners(output_image, radius=100)
-
-        save_path = filedialog.asksaveasfilename(defaultextension=".webp", filetypes=[("WEBP", "*.webp")])
-        if save_path:
-            output_image.save(save_path, "WEBP", quality=95, dpi=(96, 96))
-            messagebox.showinfo("Saved", f"Group image saved to {save_path}")
 
     def remove_metadata(self, img):
         """Remove metadata from the image."""
