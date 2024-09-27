@@ -12,7 +12,7 @@
         <div class="product-slider" id="meet-us-slider">
           {{ range (where .Site.RegularPages "Section" "people") }}
             {{ $img := index .Params.images 0 }}
-            {{ if and (not (in $img "alice.png")) (not (in $img "bob.png")) (not (in .Params.categories "alumni")) }}
+            {{ if and (not (in $img "alice.webp")) (not (in $img "bob.webp")) (not (in .Params.categories "alumni")) }}
             <div class="block" data-category="{{ .Params.categories }}">
               <div class="slider-gallery-overlay">
                 <a href="{{ .Permalink }}" class="slider-gallery-popup">
@@ -34,6 +34,7 @@
         <div class="alumni-slider" id="mfq-world-slider" style="display:none;">
           {{ range (where (where .Site.RegularPages "Section" "people") ".Params.categories" "alumni") }}
             {{ $img := index .Params.images 0 }}
+            {{ if and (not (in $img "alice.webp")) (not (in $img "bob.webp")) }}
             <div class="block" data-category="alumni">
               <div class="slider-gallery-overlay">
                 <a href="{{ .Permalink }}" class="slider-gallery-popup">
@@ -47,6 +48,7 @@
                 <p class="price">{{.Params.summary}}</p>
               </div>
             </div>
+            {{ end }}
           {{ end }}
         </div>
       </div>
