@@ -1,7 +1,7 @@
 ---
 title: "Saulo V. Moreira"
 images: 
-  - "images/showcase/saulo.png"
+  - "images/showcase/saulo.webp"
 
 # meta description
 description : "saulo moreira landing page"

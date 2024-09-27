@@ -1,7 +1,7 @@
 ---
 title: "John A. Mora Rodríguez"
 images: 
-  - "images/showcase/john_alexander.png"
+  - "images/showcase/john_alexander.webp"
 
 # meta description
 description : "john alexander landing page"

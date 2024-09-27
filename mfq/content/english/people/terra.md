@@ -1,7 +1,7 @@
 ---
 title: "Marcelo Terra Cunha"
 images: 
-  - "images/showcase/terra.png"
+  - "images/showcase/terra.webp"
 
 # meta description
 description : "marcelo terra cunha landing page"

@@ -41,6 +41,13 @@ class ImageCropper:
         # Setup for group photos
         self.setup_group_tab()
 
+        # Bind the arrow keys to move the images
+        self.root.bind("<Up>", lambda event: self.move_image_with_keys(0, -3))
+        self.root.bind("<Down>", lambda event: self.move_image_with_keys(0, 3))
+        self.root.bind("<Left>", lambda event: self.move_image_with_keys(-3, 0))
+        self.root.bind("<Right>", lambda event: self.move_image_with_keys(3, 0))
+
+
     def setup_personal_tab(self):
         """Setup the interface for personal photos."""
         # Output image size
@@ -70,7 +77,7 @@ class ImageCropper:
         # Slider for resizing the image (zoom in/out)
         Label(self.personal_tab, text="Resize Image").grid(row=2, column=0)
         Button(self.personal_tab, text="–", command=lambda: self.update_slider(-0.05)).grid(row=2, column=1)
-        self.scale = Scale(self.personal_tab, from_=0.05, to=2.0, resolution=0.05, orient=HORIZONTAL, command=self.update_scale)
+        self.scale = Scale(self.personal_tab, from_=0.05, to=3.0, resolution=0.01, orient=HORIZONTAL, command=self.update_scale)
         self.scale.set(self.scale_factor)
         self.scale.grid(row=2, column=2)
         Button(self.personal_tab, text="+", command=lambda: self.update_slider(0.05)).grid(row=2, column=3)
@@ -114,7 +121,7 @@ class ImageCropper:
         # Slider for resizing the image (zoom in/out)
         Label(self.group_tab, text="Resize Image").grid(row=2, column=0)
         Button(self.group_tab, text="–", command=lambda: self.update_group_slider(-0.05)).grid(row=2, column=1)
-        self.group_scale = Scale(self.group_tab, from_=0.05, to=2.0, resolution=0.05, orient=HORIZONTAL, command=self.update_group_scale)
+        self.group_scale = Scale(self.group_tab, from_=0.05, to=3.0, resolution=0.01, orient=HORIZONTAL, command=self.update_group_scale)
         self.group_scale.set(self.scale_factor_group)
         self.group_scale.grid(row=2, column=2)
         Button(self.group_tab, text="+", command=lambda: self.update_group_slider(0.05)).grid(row=2, column=3)
@@ -160,13 +167,13 @@ class ImageCropper:
         # Use the original image to prevent cumulative resizing
         original_image = self.group_image_original.copy()
 
-        # If scaling is applied, resize the original image accordingly
+        # If scaling is applied and not 1.0, resize the original image accordingly
         if self.scale_factor_group != 1.0:
             img_width = int(original_image.width * self.scale_factor_group)
             img_height = int(original_image.height * self.scale_factor_group)
             resized_img = original_image.resize((img_width, img_height), Image.LANCZOS)
         else:
-            resized_img = original_image
+            resized_img = original_image  # No resizing if scale factor is 1.0
 
         # Create a blank output image
         output_image = Image.new("RGB", (self.output_width_group, self.output_height_group), "white")
@@ -185,8 +192,9 @@ class ImageCropper:
         save_path = filedialog.asksaveasfilename(defaultextension=".webp", initialfile=default_filename, filetypes=[("WEBP", "*.webp")])
 
         if save_path:
-            output_image.save(save_path, "WEBP", quality=95)
+            output_image.save(save_path, "WEBP", quality=80, dpi=(96, 96))
             messagebox.showinfo("Saved", f"Group image saved to {save_path}")
+
 
 
 
@@ -234,6 +242,18 @@ class ImageCropper:
             # Display the image
             self.image_id = self.canvas_personal.create_image(display_x, display_y, anchor="nw", image=self.img_tk)
 
+            # Add dashed lines for the center of the canvas
+            center_x = self.canvas_width // 2
+            center_y = self.canvas_height // 2
+
+            # Vertical center line (dashed line)
+            self.canvas_personal.create_line(center_x, 0, center_x, self.canvas_height, fill="gray", dash=(5, 5))
+
+            # Horizontal center line (dashed line)
+            self.canvas_personal.create_line(0, center_y, self.canvas_width, center_y, fill="gray", dash=(5, 5))
+
+
+
     def update_group_image(self):
         """Update the displayed group image based on the current scale and position."""
         if self.group_image:
@@ -259,19 +279,68 @@ class ImageCropper:
             # Display the image
             self.group_image_id = self.group_canvas.create_image(display_x, display_y, anchor="nw", image=self.group_img_tk)
 
+            # Add dashed lines for the center of the canvas
+            center_x = self.canvas_width_group // 2
+            center_y = self.canvas_height_group // 2
+
+            # Vertical center line (dashed line)
+            self.group_canvas.create_line(center_x, 0, center_x, self.canvas_height_group, fill="gray", dash=(5, 5))
+
+            # Horizontal center line (dashed line)
+            self.group_canvas.create_line(0, center_y, self.canvas_width_group, center_y, fill="gray", dash=(5, 5))
+
+    def move_image_with_keys(self, dx, dy):
+        """Move the image with keyboard arrow keys based on the active tab."""
+        selected_tab = self.tab_control.index(self.tab_control.select())  # Get the selected tab index
+
+        if selected_tab == 0:  # Personal Photos tab
+            self.img_x += dx
+            self.img_y += dy
+            self.update_image()
+
+        elif selected_tab == 1:  # Group Photos tab
+            # Adjust the step size proportionally for group photos
+            step_scale = self.output_width_group / self.output_width
+            self.img_x_group += dx * step_scale
+            self.img_y_group += dy * step_scale
+            self.update_group_image()
+
+
+
+
     def update_slider(self, step):
         """Increase or decrease the slider value for personal image resizing."""
-        new_value = self.scale.get() + step
-        new_value = max(0.05, min(2.0, new_value))
+        current_value = self.scale.get()
+
+        # Define the smaller step size for values between 0.05 and 0.1
+        if 0.05 < current_value <= 0.3:
+            new_value = current_value + step / 5  # Adjust the step size to be more granular
+        else:
+            new_value = current_value + step
+
+        # Make sure the new value stays within the allowed range
+        new_value = max(0.05, min(3.0, new_value))
+
+        # Update the slider and scale value
         self.scale.set(new_value)
         self.update_scale(new_value)
 
     def update_group_slider(self, step):
         """Increase or decrease the slider value for group image resizing."""
-        new_value = self.group_scale.get() + step
-        new_value = max(0.05, min(2.0, new_value))
+        current_value = self.group_scale.get()
+
+        # Define the smaller step size for values between 0.05 and 0.1
+        if 0.05 < current_value <= 0.3:
+            new_value = current_value + step / 5  # Adjust the step size to be more granular
+        else:
+            new_value = current_value + step
+
+        # Make sure the new value stays within the allowed range
+        new_value = max(0.05, min(3.0, new_value))
+
+        # Update the group scale and scale factor
         self.group_scale.set(new_value)
-        self.update_group_scale(new_value)
+        self.upd
 
     def update_scale(self, scale_value):
         """Update the scale factor and redraw the personal image."""
@@ -332,13 +401,13 @@ class ImageCropper:
         # Use the original image to prevent cumulative resizing
         original_image = self.image_original.copy()
 
-        # If scaling is applied, resize the original image accordingly
+        # If scaling is applied and not 1.0, resize the original image accordingly
         if self.scale_factor != 1.0:
             img_width = int(original_image.width * self.scale_factor)
             img_height = int(original_image.height * self.scale_factor)
             resized_img = original_image.resize((img_width, img_height), Image.LANCZOS)
         else:
-            resized_img = original_image
+            resized_img = original_image  # No resizing if scale factor is 1.0
 
         # Create a blank output image
         output_image = Image.new("RGB", (self.output_width, self.output_height), "white")
@@ -357,8 +426,9 @@ class ImageCropper:
         save_path = filedialog.asksaveasfilename(defaultextension=".webp", initialfile=default_filename, filetypes=[("WEBP", "*.webp")])
 
         if save_path:
-            output_image.save(save_path, "WEBP", quality=95, dpi=(96, 96))
+            output_image.save(save_path, "WEBP", quality=80, dpi=(96, 96))
             messagebox.showinfo("Saved", f"Image saved to {save_path}")
+
 
 
     def load_group_image(self):
@@ -391,16 +461,28 @@ class ImageCropper:
         return img_no_meta
 
     def round_corners(self, img, radius=50):
-        """Make the image have rounded corners with a white background."""
+        """Make the image have rounded corners with a smooth curve."""
         img = img.convert("RGB")
-        mask = Image.new("L", img.size, 0)
+        
+        # Create a high-resolution mask (4x size for anti-aliasing)
+        mask_size = (img.size[0] * 4, img.size[1] * 4)
+        mask = Image.new("L", mask_size, 0)
+        
+        # Draw the rounded rectangle on the high-resolution mask
         draw = ImageDraw.Draw(mask)
-        draw.rounded_rectangle([(0, 0), img.size], radius, fill=255)
-
+        draw.rounded_rectangle([(0, 0), mask_size], radius * 4, fill=255)  # 4x radius for smooth corners
+        
+        # Downscale the mask to the original image size (this applies anti-aliasing)
+        mask = mask.resize(img.size, Image.LANCZOS)
+        
+        # Create a white background image
         white_bg = Image.new("RGB", img.size, (255, 255, 255))
+        
+        # Paste the image onto the white background, using the smooth mask
         white_bg.paste(img, mask=mask)
 
         return white_bg
+
 
 # Initialize and run the application
 root = Tk()

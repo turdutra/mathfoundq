@@ -1,7 +1,7 @@
 ---
 title: "Leonardo Pereira Stabile"
 images: 
-  - "images/showcase/leonardo.png"
+  - "images/showcase/leonardo.webp"
 
 # meta description
 description : "leonardo pereira stabile landing page"

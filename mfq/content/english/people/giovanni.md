@@ -1,7 +1,7 @@
 ---
 title: "Giovanni Bufalari"
 images: 
-  - "images/showcase/giovanni.png"
+  - "images/showcase/giovanni.webp"
 
 # meta description
 description : "giovanni bufalari landing page"

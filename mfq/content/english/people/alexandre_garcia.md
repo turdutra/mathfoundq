@@ -1,7 +1,7 @@
 ---
 title: "Alexandre Teodoro Garcia"
 images: 
-  - "images/showcase/alexandre_garcia.png"
+  - "images/showcase/alexandre_garcia.webp"
 
 # meta description
 description : "Alexandre Teodoro Garcia landing page"

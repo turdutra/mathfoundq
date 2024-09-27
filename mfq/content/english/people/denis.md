@@ -1,7 +1,7 @@
 ---
 title: "Denis Freudenheim Moraes"
 images: 
-  - "images/showcase/denis.png"
+  - "images/showcase/denis.webp"
 
 # meta description
 description : "denis moraes landing page"

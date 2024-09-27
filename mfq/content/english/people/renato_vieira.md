@@ -1,7 +1,7 @@
 ---
 title: "Renato Vasconcellos Vieira"
 images: 
-  - "images/showcase/renato_vieira.png"
+  - "images/showcase/renato_vieira.webp"
 
 # meta description
 description : "Renato Vasconcellos Vieira landing page"

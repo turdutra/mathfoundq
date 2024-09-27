@@ -1,7 +1,7 @@
 ---
 title: "Vitor Sena"
 images: 
-  - "images/showcase/vitor.png"
+  - "images/showcase/vitor.webp"
 
 # meta description
 description : "vitor sena landing page"

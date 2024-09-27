@@ -1,7 +1,7 @@
 ---
 title: "Bianca Moreno"
 images: 
-  - "images/showcase/bianca.png"
+  - "images/showcase/bianca.webp"
 
 # meta description
 description : "bianca moreno  landing page"

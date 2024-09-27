@@ -1,7 +1,7 @@
 ---
 title: "Lina Vandré"
 images: 
-  - "images/showcase/lina.png"
+  - "images/showcase/lina.webp"
 
 # meta description
 description : "lina vandré landing page"

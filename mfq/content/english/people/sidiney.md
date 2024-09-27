@@ -1,7 +1,7 @@
 ---
 title: "Sidiney B. Montanhano"
 images: 
-  - "images/showcase/sidiney.png"
+  - "images/showcase/sidiney.webp"
 
 # meta description
 description : "sidiney montanhano landing page"

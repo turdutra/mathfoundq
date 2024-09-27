@@ -1,7 +1,7 @@
 ---
 title: "Arthur C. R. Dutra"
 images: 
-  - "images/showcase/arthur.png"
+  - "images/showcase/arthur.webp"
 
 # meta description
 description : "arthur dutra landing page"

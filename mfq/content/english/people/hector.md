@@ -1,7 +1,7 @@
 ---
 title: "Hector de Menezes"
 images: 
-  - "images/showcase/hector.png"
+  - "images/showcase/hector.webp"
 
 # meta description
 description : "hector menezes landing page"

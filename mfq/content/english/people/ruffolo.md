@@ -1,7 +1,7 @@
 ---
 title: "Gabriel Ruffolo"
 images: 
-  - "images/showcase/ruffolo.png"
+  - "images/showcase/ruffolo.webp"
 
 # meta description
 description : "gabriel ruffolo landing page"

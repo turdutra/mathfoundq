@@ -1,7 +1,7 @@
 ---
 title: "Lucas Pollyceno"
 images: 
-  - "images/showcase/lucas.png"
+  - "images/showcase/lucas.webp"
 
 # meta description
 description : "lucas pollyceno landing page"

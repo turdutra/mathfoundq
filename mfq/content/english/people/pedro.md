@@ -1,7 +1,7 @@
 ---
 title: "Pedro Lauand"
 images: 
-  - "images/showcase/pedro.png"
+  - "images/showcase/pedro.webp"
 
 # meta description
 description : "pedro lauand landing page"

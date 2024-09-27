@@ -1,7 +1,7 @@
 ---
 title: "Gabriel Alves"
 images: 
-  - "images/showcase/gabriel.png"
+  - "images/showcase/gabriel.webp"
 
 # meta description
 description : "gabriel alves landing page"

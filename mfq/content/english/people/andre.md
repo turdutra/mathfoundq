@@ -1,7 +1,7 @@
 ---
 title: "André Mazzari"
 images: 
-  - "images/showcase/andre.png"
+  - "images/showcase/andre.webp"
 
 # meta description
 description : "andre saugo mazzari landing page"

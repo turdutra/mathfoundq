@@ -10,7 +10,7 @@
 
         <!-- Meet Us Slider (default visible) -->
         <div class="product-slider" id="meet-us-slider">
-          {{ range (shuffle (where .Site.RegularPages "Section" "people")) }}
+          {{ range (where .Site.RegularPages "Section" "people") }}
             {{ $img := index .Params.images 0 }}
             {{ if and (not (in $img "alice.png")) (not (in $img "bob.png")) (not (in .Params.categories "alumni")) }}
             <div class="block" data-category="{{ .Params.categories }}">
@@ -32,7 +32,7 @@
 
         <!-- Alumni Slider (hidden by default) -->
         <div class="alumni-slider" id="mfq-world-slider" style="display:none;">
-          {{ range (shuffle (where (where .Site.RegularPages "Section" "people") ".Params.categories" "alumni")) }}
+          {{ range (where (where .Site.RegularPages "Section" "people") ".Params.categories" "alumni") }}
             {{ $img := index .Params.images 0 }}
             <div class="block" data-category="alumni">
               <div class="slider-gallery-overlay">

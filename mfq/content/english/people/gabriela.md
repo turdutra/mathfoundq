@@ -1,7 +1,7 @@
 ---
 title: "Gabriela Ruiz"
 images: 
-  - "images/showcase/gabriela.png"
+  - "images/showcase/gabriela.webp"
 
 # meta description
 description : "gabriela ruiz landing page"

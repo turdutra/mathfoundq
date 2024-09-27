@@ -1,7 +1,7 @@
 ---
 title: "Thales Gottardello Marrafon"
 images: 
-  - "images/showcase/thales.png"
+  - "images/showcase/thales.webp"
 
 # meta description
 description : "thales marrafon landing page"

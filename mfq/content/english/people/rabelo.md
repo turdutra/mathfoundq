@@ -1,7 +1,7 @@
 ---
 title: "Rafael Rabelo"
 images: 
-  - "images/showcase/rabelo.png"
+  - "images/showcase/rabelo.webp"
 
 # meta description
 description : "rafael rabelo landing page"

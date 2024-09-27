@@ -1,7 +1,7 @@
 ---
 title: "Rodrigo Ramos"
 images: 
-  - "images/showcase/rodrigo_ramos.png"
+  - "images/showcase/rodrigo_ramos.webp"
 
 # meta description
 description : "rodrigo ramos landing page"

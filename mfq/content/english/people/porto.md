@@ -1,7 +1,7 @@
 ---
 title: "Lucas E. A. Porto"
 images: 
-  - "images/showcase/porto.png"
+  - "images/showcase/porto.webp"
 
 # meta description
 description : "lucas emanuel antunes porto landing page"

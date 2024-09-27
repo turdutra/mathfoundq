@@ -1,7 +1,7 @@
 ---
 title: "Roberto D. Baldijão"
 images: 
-  - "images/showcase/roberto.png"
+  - "images/showcase/roberto.webp"
 
 # meta description
 description : "roberto dobal baldijão landing page"

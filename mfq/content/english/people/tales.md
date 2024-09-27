@@ -1,7 +1,7 @@
 ---
 title: "Tales Rick Perche"
 images: 
-  - "images/showcase/tales.png"
+  - "images/showcase/tales.webp"
 
 # meta description
 description : "tales rick perche landing page"

@@ -1,7 +1,7 @@
 ---
 title: "Carlos Vieira"
 images: 
-  - "images/showcase/humberto.png"
+  - "images/showcase/humberto.webp"
 
 # meta description
 description : "carlos humberto vieira landing page"

@@ -1,7 +1,7 @@
 ---
 title: "José Nogueira"
 images: 
-  - "images/showcase/jose.png"
+  - "images/showcase/jose.webp"
 
 # meta description
 description : "jose nogueira landing page"

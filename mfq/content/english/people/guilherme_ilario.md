@@ -1,7 +1,7 @@
 ---
 title: "Guilherme Ilário Correr"
 images: 
-  - "images/showcase/guilherme_ilario.png"
+  - "images/showcase/guilherme_ilario.webp"
 
 # meta description
 description : "guilherme ilario landing page"

@@ -1,7 +1,7 @@
 ---
 title: "Sabrina Zani"
 images: 
-  - "images/showcase/sabrina_zani.png"
+  - "images/showcase/sabrina_zani.webp"
 
 # meta description
 description : "sabrina zani landing page"

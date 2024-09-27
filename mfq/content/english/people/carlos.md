@@ -1,7 +1,7 @@
 ---
 title: "Carlos de Gois"
 images: 
-  - "images/showcase/gois.png"
+  - "images/showcase/gois.webp"
 
 # meta description
 description : "carlos de gois landing page"

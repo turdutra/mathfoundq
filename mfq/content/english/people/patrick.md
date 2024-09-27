@@ -1,7 +1,7 @@
 ---
 title: "Patrick Andriolo"
 images: 
-  - "images/showcase/patrick.png"
+  - "images/showcase/patrick.webp"
 
 # meta description
 description : "patrick andriolo landing page"
