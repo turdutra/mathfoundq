@@ -1,5 +1,22 @@
+# NOTE: If a title is too long, please add line breaks.
+# Example:
+#   title: >
+#     This is a very long title that spans
+#     multiple lines for readability.
+
 publications:
-  - title: Characterizing Optimal-speed unitary time evolution of pure and quasi-pure quantum states
+  - title: >
+      Unexpected consequences of Post-Quantum theories in the graph-theoretical
+      approach to correlations
+    link: https://arxiv.org/abs/2411.09036
+    authors:
+      - "José Nogueira"
+      - "Carlos Vieira"
+      - "Marcelo Terra Cunha"
+    published_in: "Preprint"
+    date: "2024-11-13"
+  - title: >
+      Characterizing Optimal-speed unitary time evolution of pure and quasi-pure quantum states
     link: https://arxiv.org/abs/2408.07794
     authors:
     - John A. Mora Rodríguez
@@ -8,8 +25,8 @@ publications:
     - Lino Grama
     published_in: Preprint
     date: '2024-08-14'
-
-  - title: Monogamy of nonlocality from multipartite information causality
+  - title: >
+      Monogamy of nonlocality from multipartite information causality
     link: https://arxiv.org/abs/2405.20115
     authors:
     - Lucas Pollyceno
@@ -19,7 +36,8 @@ publications:
     - Marcin Pawłowski
     published_in: Preprint
     date: '2024-01-01'
-  - title: Causal Data Fusion with Quantum Confounders
+  - title: >
+      Causal Data Fusion with Quantum Confounders
     link: https://arxiv.org/abs/2405.19278
     authors:
     - Pedro Lauand
@@ -27,7 +45,8 @@ publications:
     - Elie Wolfe
     published_in: Preprint
     date: '2024-05-01'
-  - title: Quantum Non-classicality from Causal Data Fusion
+  - title: >
+      Quantum Non-classicality from Causal Data Fusion
     link: https://arxiv.org/abs/2405.19252
     authors:
     - Pedro Lauand
@@ -35,13 +54,15 @@ publications:
     - Elie Wolfe
     published_in: Preprint
     date: '2024-05-01'
-  - title: Optimal complexity of parameterized quantum circuits
+  - title: >
+      Optimal complexity of parameterized quantum circuits
     link: https://arxiv.org/abs/2405.19537
     authors:
     - Guilherme Ilário Correr
     published_in: Preprint
     date: '2024-01-01'
-  - title: Trade-off relations between Bell nonlocality and local Kochen-Specker contextuality
+  - title: >
+      Trade-off relations between Bell nonlocality and local Kochen-Specker contextuality
       in generalized Bell scenarios
     link: https://iopscience.iop.org/article/10.1088/1367-2630/ad7167
     authors:
@@ -52,7 +73,8 @@ publications:
     - Pawel Kurzynski
     published_in: New Journal of Physics
     date: '2024-08-30'
-  - title: Characterizing randomness in parameterized quantum circuits through expressibility
+  - title: >
+      Characterizing randomness in parameterized quantum circuits through expressibility
       and average entanglement
     link: https://arxiv.org/abs/2405.02265
     authors:
@@ -63,7 +85,8 @@ publications:
     - Diogo O. Soares-Pinto
     published_in: Preprint
     date: '2024-01-01'
-  - title: Quantum non-classicality in the simplest causal network
+  - title: >
+      Quantum non-classicality in the simplest causal network
     link: https://arxiv.org/abs/2404.12790
     authors:
     - Pedro Lauand
@@ -72,7 +95,8 @@ publications:
     - Rafael Chaves
     published_in: Preprint
     date: '2024-01-01'
-  - title: Observational-Interventional Bell Inequalities
+  - title: >
+      Observational-Interventional Bell Inequalities
     link: https://arxiv.org/abs/2404.05015
     authors:
     - Davide Poderini
@@ -83,7 +107,8 @@ publications:
     - Rafael Chaves
     published_in: Preprint
     date: '2024-01-01'
-  - title: Can multiple observers detect KS-contextuality?
+  - title: >
+      Can multiple observers detect KS-contextuality?
     link: https://arxiv.org/abs/2310.19564
     authors:
     - Arthur C. R. Dutra
@@ -91,7 +116,8 @@ publications:
     - Marcelo Terra Cunha
     published_in: Preprint
     date: '2023-01-01'
-  - title: The quantum maxima for the basic graphs of exclusivity are not reachable
+  - title: >
+      The quantum maxima for the basic graphs of exclusivity are not reachable
       in Bell scenarios
     link: https://royalsocietypublishing.org/doi/10.1098/rsta.2023.0006
     authors:
@@ -101,14 +127,16 @@ publications:
     - Adán Cabello
     published_in: Philosophical Transactions of the Royal Society A
     date: '2023-01-01'
-  - title: Wigner and friends, a map is not the territory! Contextuality in multi-agent
+  - title: >
+      Wigner and friends, a map is not the territory! Contextuality in multi-agent
       paradoxes
     link: https://arxiv.org/abs/2305.07792
     authors:
     - Sidiney B. Montanhano
     published_in: Preprint
     date: '2023-01-01'
-  - title: Witnessing Non-Classicality in a Simple Causal Structure with Three Observable
+  - title: >
+      Witnessing Non-Classicality in a Simple Causal Structure with Three Observable
       Variables
     link: https://arxiv.org/abs/2211.13349
     authors:
@@ -121,7 +149,8 @@ publications:
     - Rafael Chaves
     published_in: Preprint
     date: '2022-01-01'
-  - title: No-broadcasting theorem for non-signalling boxes and assemblages
+  - title: >
+      No-broadcasting theorem for non-signalling boxes and assemblages
     link: https://arxiv.org/abs/2211.14351
     authors:
     - Carlos Vieira
@@ -130,7 +159,8 @@ publications:
     - Zoltán Zimborás
     published_in: Preprint
     date: '2022-01-01'
-  - title: Synchronous observation of Bell nonlocality and state-dependent Kochen-Specker
+  - title: >
+      Synchronous observation of Bell nonlocality and state-dependent Kochen-Specker
       contextuality
     link: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.130.040201
     authors:
@@ -143,7 +173,8 @@ publications:
     - Peng Xue
     published_in: Phys. Rev. Lett. 130, 040201 (2023)
     date: '2022-01-01'
-  - title: Interplays between classical and quantum entanglement-assisted communication
+  - title: >
+      Interplays between classical and quantum entanglement-assisted communication
       scenarios
     link: https://arxiv.org/abs/2205.05171
     authors:
@@ -153,13 +184,15 @@ publications:
     - Rafael Rabelo
     published_in: Preprint
     date: '2022-01-01'
-  - title: Differential Geometry of Contextuality
+  - title: >
+      Differential Geometry of Contextuality
     link: https://arxiv.org/abs/2202.08719
     authors:
     - Sidiney B. Montanhano
     published_in: Preprint
     date: '2022-02-01'
-  - title: Entanglement-based quantum communication complexity beyond Bell nonlocality
+  - title: >
+      Entanglement-based quantum communication complexity beyond Bell nonlocality
     link: https://www.nature.com/articles/s41534-022-00520-8
     authors:
     - Joseph Ho
@@ -175,7 +208,8 @@ publications:
     - Rafael Chaves
     published_in: npj Quantum Information
     date: '2021-06-01'
-  - title: Quantum communication complexity beyond Bell nonlocality
+  - title: >
+      Quantum communication complexity beyond Bell nonlocality
     link: https://arxiv.org/abs/2106.06552
     authors:
     - Joseph Ho
@@ -191,28 +225,32 @@ publications:
     - Rafael Chaves
     published_in: Preprint
     date: '2021-06-01'
-  - title: Contextuality in the Bundle Approach, n-Contextuality, and the Role of Holonomyontextuality
+  - title: >
+      Contextuality in the Bundle Approach, n-Contextuality, and the Role of Holonomyontextuality
       in the Fibration Approach and the Role of Holonomy
     link: https://arxiv.org/abs/2105.14132
     authors:
     - Sidiney B. Montanhano
     published_in: Preprint
     date: '2021-05-01'
-  - title: Quantum sets of the multicolored-graph approach to contextuality
+  - title: >
+      Quantum sets of the multicolored-graph approach to contextuality
     link: https://doi.org/10.1103/PhysRevA.106.062210
     authors:
     - Lina Vandré
     - Marcelo Terra Cunha
     published_in: Phys. Rev. A 106, 062210 (2022)
     date: '2021-05-01'
-  - title: Characterization of Contextuality with Semi-Module Čech Cohomology and its
+  - title: >
+      Characterization of Contextuality with Semi-Module Čech Cohomology and its
       Relation with Cohomology of Effect Algebras
     link: https://arxiv.org/abs/2104.11411
     authors:
     - Sidiney B. Montanhano
     published_in: Preprint
     date: '2021-04-01'
-  - title: General Method for classicality certification in the prepare and measure
+  - title: >
+      General Method for classicality certification in the prepare and measure
       scenario
     link: https://arxiv.org/abs/2101.10459
     authors:
@@ -224,7 +262,8 @@ publications:
     - Rafael Rabelo
     published_in: PRX Quantum 2, 030311 (2021)
     date: '2021-01-01'
-  - title: Quantum Darwinism and the spreading of classical information in non-classical
+  - title: >
+      Quantum Darwinism and the spreading of classical information in non-classical
       theories
     link: https://quantum-journal.org/papers/q-2022-01-31-636/
     authors:
@@ -234,7 +273,8 @@ publications:
     - Markus P. Mueller
     published_in: Quantum 6, 636 (2022)
     date: '2020-12-01'
-  - title: Bounding the sets of classical and quantum correlations in networks
+  - title: >
+      Bounding the sets of classical and quantum correlations in networks
     link: https://arxiv.org/abs/1904.08943
     authors:
     - Alejandro Pozas-Kerstjens
@@ -246,14 +286,16 @@ publications:
     - Antonio Acín
     published_in: Phys. Rev. Lett. 123, 140503 (2019)
     date: '2019-04-01'
-  - title: Classical Limits and Contextuality in a Scenario of Multiple Observers
+  - title: >
+      Classical Limits and Contextuality in a Scenario of Multiple Observers
     link: https://arxiv.org/abs/1811.00615
     authors:
     - Roberto D. Baldijao
     - Marcelo Terra Cunha
     published_in: Phys. Rev. A 102.052226 (2020)
     date: '2018-11-01'
-  - title: Uniqueness of the joint measurement and the structure of the set of compatible
+  - title: >
+      Uniqueness of the joint measurement and the structure of the set of compatible
       quantum measurements
     link: https://arxiv.org/abs/1711.04804
     authors:
@@ -261,7 +303,8 @@ publications:
     - Marcelo Terra Cunha
     published_in: Journal of Mathematical Physics 59, 042106 (2018)
     date: '2017-11-01'
-  - title: Proposal for Automated Operations for Single-Photon Multipath Qudits
+  - title: >
+      Proposal for Automated Operations for Single-Photon Multipath Qudits
     link: https://arxiv.org/abs/1703.10752
     authors:
     - Roberto D. Baldijão
@@ -272,7 +315,8 @@ publications:
     - Sebastião Pádua
     published_in: Phys. Rev. A 96, 032329 (2017)
     date: '2017-03-01'
-  - title: General method for constructing local-hidden-variable models for entangled
+  - title: >
+      General method for constructing local-hidden-variable models for entangled
       quantum states
     link: https://arxiv.org/abs/1512.00277
     authors:
@@ -282,7 +326,8 @@ publications:
     - Paul Skrzypczyk
     published_in: Phys. Rev. Lett. 117, 190401 (2016)
     date: '2015-12-01'
-  - title: Multigraph approach to quantum non-locality
+  - title: >
+      Multigraph approach to quantum non-locality
     link: https://arxiv.org/abs/1407.5340
     authors:
     - Rafael Rabelo
@@ -292,7 +337,8 @@ publications:
     - Adan Cabello
     published_in: 'J. Phys. A: Math. Theor. 47 (2014) 424021'
     date: '2014-07-01'
-  - title: Simple Hardy-like proof of quantum contextuality
+  - title: >
+      Simple Hardy-like proof of quantum contextuality
     link: https://arxiv.org/abs/1310.8330
     authors:
     - Adan Cabello
@@ -301,14 +347,16 @@ publications:
     - Mohamed Bourennane
     published_in: Phys. Rev. Lett. 111 (2013) 180404
     date: '2013-10-01'
-  - title: State-independent contextuality with identical particles
+  - title: >
+      State-independent contextuality with identical particles
     link: https://arxiv.org/abs/1212.5501
     authors:
     - Adan Cabello
     - Marcelo Terra Cunha
     published_in: Phys. Rev. A 87 (2013) 022126
     date: '2012-12-01'
-  - title: Tests of Bell inequality with arbitrarily low photodetection efficiency and
+  - title: >
+      Tests of Bell inequality with arbitrarily low photodetection efficiency and
       homodyne measurements
     link: https://arxiv.org/abs/1112.1719
     authors:
@@ -320,7 +368,8 @@ publications:
     - Marcelo Terra Cunha
     published_in: Phys. Rev. A 86, 030101(R) (2012)
     date: '2011-12-01'
-  - title: Continuous Quantum Error Correction Through Local Operations
+  - title: >
+      Continuous Quantum Error Correction Through Local Operations
     link: https://arxiv.org/abs/1009.4744
     authors:
     - Eduardo Mascarenhas

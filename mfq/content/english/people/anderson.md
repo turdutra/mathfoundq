@@ -1,7 +1,7 @@
 ---
 title: "Anderson Beraldo de Araújo"
 images: 
-  - "images/showcase/bob.webp"
+  - "images/showcase/anderson.webp"
 
 # meta description
 description : "Anderson Beraldo de Araújo landing page"

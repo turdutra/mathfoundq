@@ -1,7 +1,7 @@
 ---
 title: "Tassius Temistocles"
 images: 
-  - "images/showcase/bob.webp"
+  - "images/showcase/tassius_temistocleswebp.webp"
 
 # meta description
 description : "tassius temistocles landing page"
