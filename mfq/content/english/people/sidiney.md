@@ -5,8 +5,8 @@ images:
 
 # meta description
 description : "sidiney montanhano landing page"
-summary: Ph.D. student
-categories: student
+summary: Alumni
+categories: alumni
 draft: false
 ---
 
