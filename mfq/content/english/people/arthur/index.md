@@ -3,8 +3,6 @@ title: "Arthur C. R. Dutra"
 images: 
   - "arthur.jpg"
 
-# meta description
-description : "arthur dutra landing page"
 summary: Ph.D. student
 categories: student
 draft: false

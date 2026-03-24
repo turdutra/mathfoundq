@@ -3,10 +3,8 @@ title: "Tassius Temistocles"
 images: 
   - "tassius_temistocleswebp.jpeg"
 
-# meta description
-description : "tassius temistocles landing page"
-summary: Ph.D. student
-categories: student
+summary: Alumni
+categories: alumni
 draft: false
 ---
 Ph.D. student.

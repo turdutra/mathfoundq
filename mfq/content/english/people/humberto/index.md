@@ -3,9 +3,7 @@ title: "Carlos Vieira"
 images: 
   - "humberto.jpg"
 
-# meta description
-description : "carlos humberto vieira landing page"
-summary: Researcher
+summary: Postdoc
 categories: researcher
 draft: false
 ---

@@ -3,8 +3,6 @@ title: "Renato Vasconcellos Vieira"
 images: 
   - "renato_vieira.jpeg"
 
-# meta description
-description : "Renato Vasconcellos Vieira landing page"
 summary: Postdoc
 categories: researcher
 draft: false

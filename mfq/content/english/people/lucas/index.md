@@ -3,8 +3,6 @@ title: "Lucas Pollyceno"
 images: 
   - "lucas.jpg"
 
-# meta description
-description : "lucas pollyceno landing page"
 summary: Alumni
 categories: alumni
 draft: false

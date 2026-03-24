@@ -3,8 +3,6 @@ title: "Carlos de Gois"
 images: 
   - "gois.jpg"
 
-# meta description
-description : "carlos de gois landing page"
 summary: Alumni
 categories: alumni
 draft: false

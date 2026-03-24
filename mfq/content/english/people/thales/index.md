@@ -3,8 +3,6 @@ title: "Thales Gottardello Marrafon"
 images: 
   - "thales.jpg"
 
-# meta description
-description : "thales marrafon landing page"
 summary: Alumni
 categories: alumni
 draft: false

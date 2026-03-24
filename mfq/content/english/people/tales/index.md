@@ -3,8 +3,6 @@ title: "Tales Rick Perche"
 images: 
   - "tales.jpg"
 
-# meta description
-description : "tales rick perche landing page"
 summary: Alumni
 categories: alumni
 draft: false

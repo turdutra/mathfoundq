@@ -3,8 +3,6 @@ title: "Hector de Menezes"
 images: 
   - "hector.png"
 
-# meta description
-description : "hector menezes landing page"
 summary: Alumni
 categories: alumni
 draft: false

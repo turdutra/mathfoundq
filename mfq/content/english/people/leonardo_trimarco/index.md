@@ -3,9 +3,7 @@ title: "Leonardo Trimarco"
 images: 
   - "leonardo_trimarco.jpg"
 
-# meta description
-description : "Leonardo Trimarco landing page"
-summary: Undergraduate student
+summary: M.Sc. student
 categories: student
 draft: false
 ---

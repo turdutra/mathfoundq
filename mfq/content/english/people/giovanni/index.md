@@ -3,8 +3,6 @@ title: "Giovanni Bufalari"
 images: 
   - "giovanni.png"
 
-# meta description
-description : "giovanni bufalari landing page"
 summary: Alumni
 categories: alumni
 draft: false

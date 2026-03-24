@@ -3,8 +3,6 @@ title: "Gabriel Ruffolo"
 images: 
   - "ruffolo.jpg"
 
-# meta description
-description : "gabriel ruffolo landing page"
 summary: Ph.D. student
 categories: student
 draft: false

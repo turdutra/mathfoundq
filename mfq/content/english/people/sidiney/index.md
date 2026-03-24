@@ -3,8 +3,6 @@ title: "Sidiney B. Montanhano"
 images: 
   - "sidiney.jpg"
 
-# meta description
-description : "sidiney montanhano landing page"
 summary: Alumni
 categories: alumni
 draft: false

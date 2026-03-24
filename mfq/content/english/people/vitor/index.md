@@ -3,8 +3,6 @@ title: "Vitor Sena"
 images: 
   - "vitor.png"
 
-# meta description
-description : "vitor sena landing page"
 summary: Alumni
 categories: alumni
 draft: false

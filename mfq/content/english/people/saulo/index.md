@@ -3,8 +3,6 @@ title: "Saulo V. Moreira"
 images: 
   - "saulo.jpeg"
 
-# meta description
-description : "saulo moreira landing page"
 summary: Alumni
 categories: alumni
 draft: false

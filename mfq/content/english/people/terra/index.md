@@ -3,8 +3,6 @@ title: "Marcelo Terra Cunha"
 images: 
   - "terra.jpg"
 
-# meta description
-description : "marcelo terra cunha landing page"
 summary: Group leader
 categories: leader
 draft: false

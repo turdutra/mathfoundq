@@ -3,10 +3,8 @@ title: "Pedro Lauand"
 images: 
   - "pedro.jpg"
 
-# meta description
-description : "pedro lauand landing page"
-summary: M.Sc. student
-categories: student
+summary: Alumni
+categories: alumni
 draft: false
 ---
 

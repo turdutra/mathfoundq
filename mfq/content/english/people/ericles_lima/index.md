@@ -3,8 +3,6 @@ title: "Éricles Lima"
 images: 
   - "bob.png"
 
-# meta description
-description : "éricles lima antunes porto landing page"
 summary: M.Sc. student
 categories: student
 draft: false

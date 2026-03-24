@@ -3,8 +3,6 @@ title: "Bianca Moreno"
 images: 
   - "bianca.jpg"
 
-# meta description
-description : "bianca moreno  landing page"
 summary: Alumni
 categories: alumni
 draft: false

@@ -3,6 +3,35 @@ $(document).ready(function () {
 
   var $meetUsSlider = $('#meet-us-slider');
   var $mfqWorldSlider = $('#mfq-world-slider');
+  var sliderOptions = {
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    dots: false,
+    arrows: false,
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  };
 
   // Function to shuffle items within a container
   function shuffleItems($container) {
@@ -13,76 +42,48 @@ $(document).ready(function () {
     }
   }
 
+  function pauseSlider($slider) {
+    if ($slider.hasClass('slick-initialized')) {
+      $slider.slick('slickPause');
+    }
+  }
+
+  function playSlider($slider) {
+    if ($slider.hasClass('slick-initialized')) {
+      $slider.slick('slickPlay');
+    }
+  }
+
+  function bindAutoResume($slider) {
+    $slider.on('swipe', function () {
+      playSlider($slider);
+    });
+  }
+
+  function showSlider($sliderToShow, $sliderToHide) {
+    $sliderToHide.css('display', 'none');
+    pauseSlider($sliderToHide);
+
+    $sliderToShow.css('display', 'block');
+    $sliderToShow.slick('setPosition');
+    playSlider($sliderToShow);
+  }
+
   // Randomize the sliders once when the page loads
   shuffleItems($meetUsSlider);
   shuffleItems($mfqWorldSlider);
 
   // Initialize both sliders on page load
-  $meetUsSlider.slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    dots: false,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
+  $meetUsSlider.slick(sliderOptions);
+  $mfqWorldSlider.slick(sliderOptions);
 
-  $mfqWorldSlider.slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    dots: false,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
+  bindAutoResume($meetUsSlider);
+  bindAutoResume($mfqWorldSlider);
+  pauseSlider($mfqWorldSlider);
 
   // Click event for "Meet Us" link
   $('#meet-us-link').on('click', function () {
-    // Hide the MFQ Around the World slider
-    $mfqWorldSlider.css('display', 'none');
-    // Show the Meet Us slider
-    $meetUsSlider.css('display', 'block');
-    $meetUsSlider.slick('setPosition'); // Recalculate layout
+    showSlider($meetUsSlider, $mfqWorldSlider);
 
     // Update text link states
     $('#meet-us-link').removeClass('faded').addClass('active');
@@ -91,11 +92,7 @@ $(document).ready(function () {
 
   // Click event for "MFQ Around the World" link
   $('#mfq-world-link').on('click', function () {
-    // Hide the Meet Us slider
-    $meetUsSlider.css('display', 'none');
-    // Show the MFQ Around the World slider
-    $mfqWorldSlider.css('display', 'block');
-    $mfqWorldSlider.slick('setPosition'); // Recalculate layout
+    showSlider($mfqWorldSlider, $meetUsSlider);
 
     // Update text link states
     $('#mfq-world-link').removeClass('faded').addClass('active');

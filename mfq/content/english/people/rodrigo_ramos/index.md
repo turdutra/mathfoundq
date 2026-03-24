@@ -3,8 +3,6 @@ title: "Rodrigo Ramos"
 images: 
   - "rodrigo_ramos.webp"
 
-# meta description
-description : "rodrigo ramos landing page"
 summary: M.Sc. student
 categories: student
 draft: false

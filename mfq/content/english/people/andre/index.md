@@ -3,8 +3,6 @@ title: "André Mazzari"
 images: 
   - "andre.png"
 
-# meta description
-description : "andre saugo mazzari landing page"
 summary: Alumni
 categories: alumni
 draft: false

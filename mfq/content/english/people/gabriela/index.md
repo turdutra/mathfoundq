@@ -3,8 +3,6 @@ title: "Gabriela Ruiz"
 images: 
   - "gabriela.png"
 
-# meta description
-description : "gabriela ruiz landing page"
 summary: Alumni
 categories: alumni
 draft: false

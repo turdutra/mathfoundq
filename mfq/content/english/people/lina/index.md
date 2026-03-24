@@ -3,8 +3,6 @@ title: "Lina Vandré"
 images: 
   - "lina.jpg"
 
-# meta description
-description : "lina vandré landing page"
 summary: Alumni
 categories: alumni
 draft: false

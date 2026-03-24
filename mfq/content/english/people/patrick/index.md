@@ -3,8 +3,6 @@ title: "Patrick Andriolo"
 images: 
   - "patrick.jpg"
 
-# meta description
-description : "patrick andriolo landing page"
 summary: Alumni
 categories: alumni
 draft: false

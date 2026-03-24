@@ -3,10 +3,8 @@ title: "Lucas E. A. Porto"
 images: 
   - "porto.jpg"
 
-# meta description
-description : "lucas emanuel antunes porto landing page"
-summary: M.Sc. student
-categories: student
+summary: Alumni
+categories: alumni
 draft: false
 ---
 

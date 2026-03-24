@@ -3,10 +3,8 @@ title: "Fernanda Ferro"
 images: 
   - "alice.png"
 
-# meta description
-description : "fernanda ferro landing page"
-summary: Undergraduate student
-categories: student
+summary: Alumni
+categories: alumni
 draft: false
 ---
 Undergraduate student doing scientific initiation.

@@ -3,8 +3,6 @@ title: "Gabriel Alves"
 images: 
   - "gabriel.jpg"
 
-# meta description
-description : "gabriel alves landing page"
 summary: Alumni
 categories: alumni
 draft: false

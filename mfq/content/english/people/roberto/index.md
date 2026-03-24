@@ -3,8 +3,6 @@ title: "Roberto D. Baldijão"
 images: 
   - "roberto.jpg"
 
-# meta description
-description : "roberto dobal baldijão landing page"
 summary: Alumni
 categories: alumni
 draft: false

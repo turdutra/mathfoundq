@@ -3,8 +3,6 @@ title: "Guilherme Ilário Correr"
 images: 
   - "guilherme_ilario.jpeg"
 
-# meta description
-description : "guilherme ilario landing page"
 summary: Alumni
 categories: alumni
 draft: false

@@ -3,8 +3,6 @@ title: "Rafael Rabelo"
 images: 
   - "rabelo.jpg"
 
-# meta description
-description : "rafael rabelo landing page"
 summary: Group leader
 categories: leader
 draft: false
