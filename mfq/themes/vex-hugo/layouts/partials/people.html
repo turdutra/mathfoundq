@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <!-- Buttons to toggle sliders -->
         <div class="toggle-text">
-          <a href="javascript:void(0);" id="meet-us-link" class="active">Meet Us</a> | 
+          <a href="javascript:void(0);" id="meet-us-link" class="active">Meet Us</a> |
           <a href="javascript:void(0);" id="mfq-world-link" class="faded">MFQ Around the World</a>
         </div>
 
@@ -12,14 +12,23 @@
         <div class="product-slider" id="meet-us-slider">
           {{ range (where .Site.RegularPages "Section" "people") }}
             {{ $img := index .Params.images 0 }}
-            {{ if and (not (in $img "alice.webp")) (not (in $img "bob.webp")) (not (in .Params.categories "alumni")) }}
+            {{ if and (not (in $img "alice.")) (not (in $img "bob.")) (not (in .Params.categories "alumni")) }}
             <div class="block" data-category="{{ .Params.categories }}">
               <div class="slider-gallery-overlay">
                 <a href="{{ .Permalink }}" class="slider-gallery-popup">
                   <i class="tf-ion-plus-round"></i>
                 </a>
               </div>
-              <img class="img-fluid" src="{{ $img | absURL }}" alt="{{ .Title }}">
+              {{ partial "person-image.html" (dict
+                "page" .
+                "src" $img
+                "alt" .Title
+                "class" "img-fluid"
+                "loading" "lazy"
+                "sizes" "(max-width: 480px) 100vw, (max-width: 600px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                "width" 400
+                "height" 265
+              ) }}
               <div class="product-info">
                 <p style="margin-bottom:.5cm;"></p>
                 <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
@@ -34,14 +43,23 @@
         <div class="alumni-slider" id="mfq-world-slider" style="display:none;">
           {{ range (where (where .Site.RegularPages "Section" "people") ".Params.categories" "alumni") }}
             {{ $img := index .Params.images 0 }}
-            {{ if and (not (in $img "alice.webp")) (not (in $img "bob.webp")) }}
+            {{ if and (not (in $img "alice.")) (not (in $img "bob.")) }}
             <div class="block" data-category="alumni">
               <div class="slider-gallery-overlay">
                 <a href="{{ .Permalink }}" class="slider-gallery-popup">
                   <i class="tf-ion-plus-round"></i>
                 </a>
               </div>
-              <img class="img-fluid" src="{{ $img | absURL }}" alt="{{ .Title }}">
+              {{ partial "person-image.html" (dict
+                "page" .
+                "src" $img
+                "alt" .Title
+                "class" "img-fluid"
+                "loading" "lazy"
+                "sizes" "(max-width: 480px) 100vw, (max-width: 600px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                "width" 400
+                "height" 265
+              ) }}
               <div class="product-info">
                 <p style="margin-bottom:.5cm;"></p>
                 <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>

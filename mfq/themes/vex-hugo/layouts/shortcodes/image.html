@@ -1,2 +1,33 @@
-<!-- layouts/shortcodes/image.html -->
-<img src="../images/group-photos/{{ .Get 0 }}" style="width: 100%; height: auto;">
+{{ $src := .Get 0 }}
+{{ $alt := .Get "alt" | default $.Page.Title }}
+{{ $resource := .Page.Resources.GetMatch $src }}
+{{ $isPriority := lt .Ordinal 2 }}
+{{ $isHero := eq .Ordinal 0 }}
+
+{{ if not $resource }}
+  {{ $resource = .Page.Resources.GetMatch (printf "*%s" $src) }}
+{{ end }}
+
+{{ if $resource }}
+  <figure class="gallery-event-frame">
+    <img
+      class="gallery-event-image"
+      src="{{ $resource.RelPermalink }}"
+      width="{{ $resource.Width }}"
+      height="{{ $resource.Height }}"
+      alt="{{ $alt }}"
+      loading="{{ if $isPriority }}eager{{ else }}lazy{{ end }}"
+      decoding="{{ if $isHero }}sync{{ else }}async{{ end }}"
+      {{ if $isHero }}fetchpriority="high"{{ end }}>
+  </figure>
+{{ else }}
+  <figure class="gallery-event-frame">
+    <img
+      class="gallery-event-image"
+      src="../images/group-photos/{{ $src }}"
+      alt="{{ $alt }}"
+      loading="{{ if $isPriority }}eager{{ else }}lazy{{ end }}"
+      decoding="{{ if $isHero }}sync{{ else }}async{{ end }}"
+      {{ if $isHero }}fetchpriority="high"{{ end }}>
+  </figure>
+{{ end }}

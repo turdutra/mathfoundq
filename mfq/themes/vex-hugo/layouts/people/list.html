@@ -18,7 +18,16 @@
                   <i class="tf-ion-plus-round"></i>
                 </a>
               </div>
-              <img class="img-fluid" src="{{ range first 1 .Params.images }}{{ . | absURL }}{{ end }}" alt="{{ .Title }}">
+              {{ partial "person-image.html" (dict
+                "page" .
+                "src" (index .Params.images 0)
+                "alt" .Title
+                "class" "img-fluid"
+                "loading" "lazy"
+                "sizes" "(max-width: 576px) 100vw, (max-width: 768px) 50vw, 25vw"
+                "width" 400
+                "height" 265
+              ) }}
             </div>
             <div class="product-info text-center">
               <h4 class="mb-2"><a href="{{ .Permalink }}" class="link-title">{{ .Title }}</a></h4>
@@ -49,7 +58,16 @@
                   <i class="tf-ion-plus-round"></i>
                 </a>
               </div>
-              <img class="img-fluid" src="{{ range first 1 .Params.images }}{{ . | absURL }}{{ end }}" alt="{{ .Title }}">
+              {{ partial "person-image.html" (dict
+                "page" .
+                "src" (index .Params.images 0)
+                "alt" .Title
+                "class" "img-fluid"
+                "loading" "lazy"
+                "sizes" "(max-width: 576px) 100vw, (max-width: 768px) 50vw, 25vw"
+                "width" 400
+                "height" 265
+              ) }}
             </div>
             <div class="product-info text-center">
               <h4 class="mb-2"><a href="{{ .Permalink }}" class="link-title">{{ .Title }}</a></h4>
@@ -80,7 +98,16 @@
                   <i class="tf-ion-plus-round"></i>
                 </a>
               </div>
-              <img class="img-fluid" src="{{ range first 1 .Params.images }}{{ . | absURL }}{{ end }}" alt="{{ .Title }}">
+              {{ partial "person-image.html" (dict
+                "page" .
+                "src" (index .Params.images 0)
+                "alt" .Title
+                "class" "img-fluid"
+                "loading" "lazy"
+                "sizes" "(max-width: 576px) 100vw, (max-width: 768px) 50vw, 25vw"
+                "width" 400
+                "height" 265
+              ) }}
             </div>
             <div class="product-info text-center">
               <h4 class="mb-2"><a href="{{ .Permalink }}" class="link-title">{{ .Title }}</a></h4>
@@ -111,7 +138,16 @@
                   <i class="tf-ion-plus-round"></i>
                 </a>
               </div>
-              <img class="img-fluid" src="{{ range first 1 .Params.images }}{{ . | absURL }}{{ end }}" alt="{{ .Title }}">
+              {{ partial "person-image.html" (dict
+                "page" .
+                "src" (index .Params.images 0)
+                "alt" .Title
+                "class" "img-fluid"
+                "loading" "lazy"
+                "sizes" "(max-width: 576px) 100vw, (max-width: 768px) 50vw, 25vw"
+                "width" 400
+                "height" 265
+              ) }}
             </div>
             <div class="product-info text-center">
               <h4 class="mb-2"><a href="{{ .Permalink }}" class="link-title">{{ .Title }}</a></h4>

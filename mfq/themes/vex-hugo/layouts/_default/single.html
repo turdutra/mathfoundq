@@ -1,21 +1,34 @@
 {{ define "main" }}
 {{ partial "mathjax.html" . }}
 
+{{ $pageImage := .Params.image }}
+
 <section class="section">
   <div class="container">
+    {{ if $pageImage }}
     <div class="row">
       <div class="col-md-5 mb-4 mb-md-0">
         <div class="sticky-image">
-          <img class="img-fluid w-80" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+          <img class="img-fluid w-80" src="{{ $pageImage | absURL }}" alt="{{ .Title }}">
         </div>
       </div>
       <div class="col-lg-6 col-md-7 offset-lg-1">
-        <h1 class="mb-4">{{.Title | markdownify}}</h1>
+        <h1 class="mb-4">{{ .Title | markdownify }}</h1>
         <div class="content">
-          {{.Content}}
+          {{ .Content }}
         </div>
       </div>
     </div>
+    {{ else }}
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        <h1 class="mb-4 text-center">{{ .Title | markdownify }}</h1>
+        <div class="content">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
   </div>
 </section>
 

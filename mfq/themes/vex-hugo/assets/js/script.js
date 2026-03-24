@@ -13,19 +13,6 @@ $(document).ready(function () {
     }
   }
 
-  // Function to preload images
-  function preloadImages(array) {
-    if (!preloadImages.list) {
-      preloadImages.list = [];
-    }
-    var list = preloadImages.list;
-    for (var i = 0; i < array.length; i++) {
-      var img = new Image();
-      img.src = array[i];
-      list.push(img);
-    }
-  }
-
   // Randomize the sliders once when the page loads
   shuffleItems($meetUsSlider);
   shuffleItems($mfqWorldSlider);
@@ -114,16 +101,4 @@ $(document).ready(function () {
     $('#mfq-world-link').removeClass('faded').addClass('active');
     $('#meet-us-link').removeClass('active').addClass('faded');
   });
-
-  // Preload all slider images
-  var imageUrls = [];
-  $('#meet-us-slider img').each(function () {
-    imageUrls.push($(this).attr('src'));
-  });
-  $('#mfq-world-slider img').each(function () {
-    imageUrls.push($(this).attr('src'));
-  });
-
-  // Call the image preloader function
-  preloadImages(imageUrls);
 });

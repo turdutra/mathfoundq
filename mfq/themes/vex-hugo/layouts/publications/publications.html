@@ -5,7 +5,7 @@
     <!-- Page Title -->
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h1>Our Recent Publications</h1>
+        <h1>{{ .Title }}</h1>
       </div>
     </div>
     <div class="content">
@@ -29,7 +29,7 @@
         <div class="row">
           <div class="col-12">
             <h2><a href="{{ $pub.link }}">{{ $pub.title }}</a></h2>
-            <p><strong>Authors:</strong> {{ delimit $pub.authors ", " }}</p>
+            <p><strong>Authors:</strong> {{ partial "publication-authors.html" (dict "site" $.Site "authors" $pub.authors) }}</p>
             <p><strong>Published in:</strong> {{ $pub.published_in }}</p>
             {{ if $pub.originally_announced }}
               <p><strong>Originally announced:</strong> {{ $pub.originally_announced }}</p>

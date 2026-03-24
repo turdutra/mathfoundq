@@ -1,0 +1,65 @@
+{{ $page := .page }}
+{{ $src := .src | default "" }}
+{{ $alt := .alt | default $page.Title }}
+{{ $class := .class | default "img-fluid" }}
+{{ $loading := .loading | default "lazy" }}
+{{ $sizes := .sizes | default "100vw" }}
+{{ $width := .width | default 400 }}
+{{ $height := .height | default 265 }}
+{{ $fetchpriority := .fetchpriority | default "" }}
+{{ $original := .original | default false }}
+{{ $resource := false }}
+
+{{ with $page }}
+  {{ if $src }}
+    {{ $resource = .Resources.GetMatch $src }}
+    {{ if not $resource }}
+      {{ $resource = .Resources.GetMatch (printf "*%s" $src) }}
+    {{ end }}
+  {{ end }}
+  {{ if not $resource }}
+    {{ with .Resources.ByType "image" }}
+      {{ $resource = index . 0 }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $resource }}
+  {{ if $original }}
+  <img
+    class="{{ $class }} person-portrait person-portrait-original"
+    src="{{ $resource.RelPermalink }}"
+    width="{{ $width }}"
+    height="{{ $height }}"
+    sizes="{{ $sizes }}"
+    alt="{{ $alt }}"
+    loading="{{ $loading }}"
+    decoding="{{ if eq $loading "eager" }}sync{{ else }}async{{ end }}"
+    {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}>
+  {{ else }}
+  {{ $small := $resource.Fill (printf "%dx%d Center webp q80" $width $height) }}
+  {{ $large := $resource.Fill (printf "%dx%d Center webp q82" (mul $width 2) (mul $height 2)) }}
+  <img
+    class="{{ $class }} person-portrait"
+    src="{{ $small.RelPermalink }}"
+    srcset="{{ $small.RelPermalink }} 1x, {{ $large.RelPermalink }} 2x"
+    sizes="{{ $sizes }}"
+    width="{{ $small.Width }}"
+    height="{{ $small.Height }}"
+    alt="{{ $alt }}"
+    loading="{{ $loading }}"
+    decoding="async"
+    {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}>
+  {{ end }}
+{{ else if $src }}
+  <img
+    class="{{ $class }} person-portrait{{ if $original }} person-portrait-original{{ end }}"
+    src="{{ $src | absURL }}"
+    width="{{ $width }}"
+    height="{{ $height }}"
+    sizes="{{ $sizes }}"
+    alt="{{ $alt }}"
+    loading="{{ $loading }}"
+    decoding="async"
+    {{ with $fetchpriority }}fetchpriority="{{ . }}"{{ end }}>
+{{ end }}

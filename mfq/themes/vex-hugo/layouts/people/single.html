@@ -5,9 +5,22 @@
     <div class="row">
       <div class="col-md-5 mb-4 mb-md-0">
         <!-- Person's image -->
-        {{ if .Params.images }}
-        <img class="img-fluid w-100" src="{{ index .Params.images 0 | absURL }}" alt="{{ .Title }}">
+        {{ $img := "" }}
+        {{ with .Params.images }}
+          {{ $img = index . 0 }}
         {{ end }}
+        {{ partial "person-image.html" (dict
+          "page" .
+          "src" $img
+          "alt" .Title
+          "class" "img-fluid w-100"
+          "loading" "eager"
+          "fetchpriority" "high"
+          "sizes" "(max-width: 767px) 100vw, 42vw"
+          "width" 700
+          "height" 464
+          "original" true
+        ) }}
       </div>
       <div class="col-lg-6 col-md-7 offset-lg-1">
         <h1 class="mb-4">{{ .Title }}</h1>
@@ -16,8 +29,24 @@
     </div>
 
     <!-- Publications Section -->
-    {{ $author := .Params.author_name | default .Title }}
-    {{ $publications := where $.Site.Data.publications.publications "authors" "intersect" (slice $author) }}
+    {{ $personSlug := "" }}
+    {{ with .File }}
+      {{ $personSlug = path.Base (path.Dir .Path) }}
+    {{ end }}
+    {{ $publicationScratch := newScratch }}
+    {{ $publicationScratch.Set "items" (slice) }}
+    {{ range $pub := $.Site.Data.publications.publications }}
+      {{ $matchesPage := false }}
+      {{ range $author := $pub.authors }}
+        {{ if eq ($author.page | default "") $personSlug }}
+          {{ $matchesPage = true }}
+        {{ end }}
+      {{ end }}
+      {{ if $matchesPage }}
+        {{ $publicationScratch.Add "items" (slice $pub) }}
+      {{ end }}
+    {{ end }}
+    {{ $publications := sort ($publicationScratch.Get "items") "date" "desc" }}
 
     <!-- Only display the publications section if there are publications for the author -->
     {{ if gt (len $publications) 0 }}
@@ -26,7 +55,7 @@
         <h2 style="margin-bottom: 15px;">MFQ Publications</h2>
         {{ range $publications }}
           <h3><a href="{{ .link }}">{{ .title }}</a></h3>
-          <p><strong>Authors:</strong> {{ delimit .authors ", " }}</p>
+          <p><strong>Authors:</strong> {{ partial "publication-authors.html" (dict "site" $.Site "authors" .authors) }}</p>
           <p><strong>Published in:</strong> {{ .published_in }}</p>
           {{ if .originally_announced }}
             <p><strong>Originally announced:</strong> {{ .originally_announced }}</p>

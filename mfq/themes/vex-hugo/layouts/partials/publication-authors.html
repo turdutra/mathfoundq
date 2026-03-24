@@ -1,0 +1,16 @@
+{{- $site := .site -}}
+{{- $authors := .authors | default (slice) -}}
+{{- range $index, $author := $authors -}}
+  {{- if gt $index 0 -}}, {{- end -}}
+  {{- $authorName := $author.name -}}
+  {{- $pageSlug := $author.page | default "" -}}
+  {{- if ne $pageSlug "" -}}
+    {{- with $site.GetPage (printf "/people/%s" $pageSlug) -}}
+      <a href="{{ .RelPermalink }}">{{ $authorName }}</a>
+    {{- else -}}
+      {{- $authorName -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $authorName -}}
+  {{- end -}}
+{{- end -}}
