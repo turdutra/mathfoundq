@@ -9,7 +9,11 @@
       </div>
     </div>
     <div class="content">
-      {{ $publications := sort .Site.Data.publications.publications "date" "desc" }}
+      {{ $publications := slice }}
+      {{ with .Resources.GetMatch "publications.yaml" }}
+        {{ $publicationsData := . | transform.Unmarshal }}
+        {{ $publications = sort ($publicationsData.publications | default (slice)) "date" "desc" }}
+      {{ end }}
       {{ $currentYear := "" }}
       {{ range $pub := $publications }}
         {{ $pubYear := dateFormat "2006" $pub.date }}

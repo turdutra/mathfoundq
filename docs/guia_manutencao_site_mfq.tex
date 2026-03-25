@@ -1,0 +1,659 @@
+\documentclass[11pt,a4paper]{article}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{listings}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black,
+  pdftitle={Guia de manutencao do site MFQ},
+  pdfauthor={Codex}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\renewcommand{\contentsname}{Sumário}
+
+\definecolor{codebg}{RGB}{247,248,250}
+\definecolor{coderule}{RGB}{210,214,220}
+
+\lstdefinestyle{mfqstyle}{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  rulecolor=\color{coderule},
+  framerule=0.5pt,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  breaklines=false,
+  tabsize=2,
+  aboveskip=0.8em,
+  belowskip=0.8em
+}
+
+\lstnewenvironment{terminal}{
+  \lstset{style=mfqstyle}
+}{}
+
+\newcommand{\repo}{\path{mathfoundq}}
+\newcommand{\mfqdir}{\path{mfq}}
+
+\title{Guia Completo de Manutenção do Site MFQ}
+\author{}
+\date{25 de março de 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Cheat Sheet}
+
+Todos os comandos deste documento aparecem sem \texttt{\$} no começo, para facilitar copiar e colar.
+Os comandos abaixo assumem que você já entrou na pasta raiz do repositório.
+
+\subsection*{Fluxo diário}
+
+\begin{terminal}
+git status
+git pull --rebase
+cd mfq
+hugo server
+\end{terminal}
+
+\subsection*{Gerar o site final}
+
+\begin{terminal}
+cd mfq
+hugo
+\end{terminal}
+
+O site gerado ficará em \path{mfq/public/}.
+
+\subsection*{Publicar no servidor}
+
+Confirme host, usuário e credenciais com a equipe antes de usar.
+
+\begin{terminal}
+cd mfq
+hugo
+cd public
+scp -r * mfq@ssh.ime.unicamp.br:public_html/
+\end{terminal}
+
+\subsection*{Arquivos que você mais vai editar}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.28\textwidth} p{0.66\textwidth}}
+\toprule
+Arquivo ou pasta & Uso \\
+\midrule
+\endhead
+\path{mfq/content/english/people/} & perfis das pessoas \\
+\path{mfq/content/english/publications/publications.yaml} & lista de publicações \\
+\path{mfq/content/english/talks/upcoming.md} & talks futuras \\
+\path{mfq/content/english/talks/previous.md} & talks passadas \\
+\path{mfq/content/english/research/} & tópicos de pesquisa \\
+\path{mfq/content/english/gallery/index.md} & eventos e fotos da galeria \\
+\path{mfq/data/en/homepage.yml} & cards de pesquisa e textos da home \\
+\bottomrule
+\end{longtable}
+
+\tableofcontents
+\newpage
+
+\section{Visão geral do repositório}
+
+O site é um site estático em Hugo. O trabalho do dia a dia acontece quase sempre nestes lugares:
+
+\begin{itemize}
+  \item \path{mfq/content/english/people/}: uma pasta por pessoa, com \path{index.md} e a foto.
+  \item \path{mfq/content/english/publications/}: página de publicações e arquivo \path{publications.yaml}.
+  \item \path{mfq/content/english/research/}: uma página por tema de pesquisa.
+  \item \path{mfq/content/english/talks/}: introdução, upcoming e previous.
+  \item \path{mfq/content/english/gallery/}: galeria e eventos com imagens.
+  \item \path{mfq/data/en/homepage.yml}: textos e cards da página inicial.
+\end{itemize}
+
+O tema do Hugo já está dentro do próprio projeto, em \path{mfq/themes/vex-hugo}. Para rodar o site localmente,
+use \texttt{hugo server} dentro de \path{mfq/}.
+
+\section{Instalação}
+
+\subsection{Windows}
+
+Se você está no Windows, o procedimento recomendado para manter este site é o seguinte:
+
+\begin{enumerate}
+  \item Faça backup dos seus arquivos.
+  \item Instale Linux.
+  \item Remova o Windows.
+  \item Volte para a próxima subseção, \textbf{Linux}, e siga normalmente.
+\end{enumerate}
+
+\subsection{Linux}
+
+\subsubsection{Git}
+
+Escolha apenas o bloco da sua distribuição Linux.
+
+\textbf{Debian / Ubuntu}
+\begin{terminal}
+sudo apt update
+sudo apt install git
+\end{terminal}
+
+\textbf{Fedora}
+\begin{terminal}
+sudo dnf install git
+\end{terminal}
+
+\textbf{Arch / Manjaro}
+\begin{terminal}
+sudo pacman -S git
+\end{terminal}
+
+Depois configure seu nome e seu e-mail uma vez:
+
+\begin{terminal}
+git config --global user.name "Seu Nome"
+git config --global user.email "seu.email@exemplo.com"
+\end{terminal}
+
+\subsubsection{Hugo}
+
+Este repositório compila com Hugo Extended. Instale a versão ``extended''.
+
+\textbf{Debian / Ubuntu}
+\begin{terminal}
+sudo apt update
+sudo apt install hugo
+\end{terminal}
+
+\textbf{Fedora}
+\begin{terminal}
+sudo dnf install hugo
+\end{terminal}
+
+\textbf{Arch / Manjaro}
+\begin{terminal}
+sudo pacman -S hugo
+\end{terminal}
+
+Confira se os programas foram instalados:
+
+\begin{terminal}
+git --version
+hugo version
+\end{terminal}
+
+\section{Primeira configuração do projeto}
+
+\subsection{Se você for o mantenedor principal}
+
+A primeira coisa a fazer é criar um \emph{fork} do repositório no GitHub.
+Esse fork é uma cópia do projeto na sua conta, o que facilita continuidade, administração e recuperação do histórico.
+
+Depois, clone o seu fork e entre na pasta:
+
+\begin{terminal}
+git clone <URL_DO_SEU_FORK> mathfoundq
+cd mathfoundq
+\end{terminal}
+
+\subsection{Se você só vai fazer edições pontuais}
+
+Se você não for o mantenedor principal, peça à equipe a URL do repositório que deve receber as mudanças e clone normalmente:
+
+\begin{terminal}
+git clone <URL_DO_REPOSITORIO> mathfoundq
+cd mathfoundq
+\end{terminal}
+
+\noindent O branch principal deste projeto é \texttt{master}.
+
+\section{Como usar Git neste projeto}
+
+\subsection{O que é o Git}
+
+Git é o sistema que registra o histórico do projeto.
+Ele permite saber o que mudou, quando mudou e quem mudou.
+Na prática, é ele que organiza as edições do site sem transformar tudo em uma pasta caótica de cópias com nomes como
+\texttt{site-final-agora-v2-definitivo}.
+
+\subsection{Conceitos que importam aqui}
+
+\begin{itemize}
+  \item \textbf{Repositório remoto}: a versão do projeto que está no GitHub.
+  \item \textbf{Fork}: uma cópia desse repositório remoto na sua própria conta do GitHub.
+  \item \textbf{Repositório local}: a cópia que fica no seu computador, dentro da pasta \repo.
+  \item \textbf{Arquivo modificado}: um arquivo que você editou localmente e que o Git percebeu como diferente da última versão salva.
+  \item \textbf{Commit}: um ``salvamento com histórico'', isto é, um ponto registrado no tempo com uma mensagem explicando a mudança.
+\end{itemize}
+
+Quando você altera um arquivo como \path{publications.yaml} ou \path{index.md}, a mudança existe primeiro só no seu
+repositório local. Ela só entra no histórico do Git quando você faz um commit. Ela só vai para o GitHub quando você faz um push.
+
+\subsection{Fluxo simples no terminal}
+
+Você não precisa rodar todos os comandos possíveis do Git toda vez.
+Na maior parte do tempo, um fluxo simples resolve:
+
+\begin{enumerate}
+  \item Entre na pasta raiz do repositório.
+  \item Rode \texttt{git pull --rebase} para atualizar sua cópia local.
+  \item Faça suas edições.
+  \item Rode \texttt{git status} para ver o que mudou.
+  \item Faça um commit.
+  \item Envie com \texttt{git push}.
+\end{enumerate}
+
+Um exemplo mínimo:
+
+\begin{terminal}
+git pull --rebase
+git status
+git add .
+git commit -m "Atualiza site MFQ"
+git push
+\end{terminal}
+
+Se quiser revisar linha por linha antes de salvar, aí sim vale usar \texttt{git diff}, mas isso é opcional no dia a dia.
+
+\subsection{Fluxo simples no VS Code}
+
+Se você usa VS Code, dá para fazer quase tudo por interface gráfica.
+
+\begin{enumerate}
+  \item Abra a pasta do projeto no VS Code.
+  \item Vá no painel \textbf{Source Control}.
+  \item Veja a lista de arquivos modificados.
+  \item Clique em um arquivo para ver o diff visual.
+  \item Use o botão \texttt{+} para incluir a mudança no commit.
+  \item Escreva a mensagem do commit.
+  \item Clique em \textbf{Commit}.
+  \item Use os botões de \textbf{Sync}, \textbf{Pull} e \textbf{Push} quando precisar.
+\end{enumerate}
+
+O suporte básico a Git já vem no próprio VS Code. Extensões de Git podem ajudar, mas você não precisa delas para o essencial.
+
+\subsection{Comandos que vale conhecer}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.26\textwidth} p{0.68\textwidth}}
+\toprule
+Comando & O que faz \\
+\midrule
+\endhead
+\texttt{git pull --rebase} & atualiza sua cópia local com base no remoto configurado \\
+\texttt{git status} & mostra arquivos alterados \\
+\texttt{git diff} & mostra exatamente o que mudou; é útil, mas não obrigatório toda vez \\
+\texttt{git add <arquivo>} & coloca um arquivo no próximo commit \\
+\texttt{git add .} & coloca todas as alterações do diretório atual \\
+\texttt{git commit -m "..."} & cria um commit com mensagem \\
+\texttt{git push} & envia seus commits para o remoto configurado \\
+\bottomrule
+\end{longtable}
+
+\section{Como usar Hugo neste projeto}
+
+Entre em \path{mfq/} para rodar os comandos do Hugo:
+
+\begin{terminal}
+cd mfq
+\end{terminal}
+
+\subsection{Visualizar o site localmente}
+
+\begin{terminal}
+hugo server
+\end{terminal}
+
+Depois abra no navegador a URL local mostrada pelo próprio Hugo no terminal.
+
+\subsection{Gerar a versão final do site}
+
+\begin{terminal}
+hugo
+\end{terminal}
+
+Isso gera a pasta \path{mfq/public/}, que contém o site estático pronto para ser publicado.
+
+\subsection{O que verificar antes de publicar}
+
+\begin{itemize}
+  \item Se a pessoa nova aparece na seção correta.
+  \item Se a imagem carregou.
+  \item Se a publicação entrou no ano correto.
+  \item Se links de autores e links externos funcionam.
+  \item Se a talk foi para \emph{upcoming} ou \emph{previous} corretamente.
+  \item Se o tema de pesquisa aparece em \path{/research}.
+\end{itemize}
+
+\section{Adicionar uma pessoa nova}
+
+Cada pessoa é um \emph{page bundle} do Hugo: uma pasta própria com \path{index.md} e a imagem dentro dela.
+
+\subsection{Passo a passo}
+
+\begin{enumerate}
+  \item Crie uma pasta em \path{mfq/content/english/people/}.
+  \item O nome da pasta será o \emph{slug} da pessoa. Exemplo: \path{maria_silva/}.
+  \item Coloque a foto dentro da mesma pasta.
+  \item Crie um arquivo \path{index.md}.
+  \item Escolha a categoria correta: \texttt{leader}, \texttt{researcher}, \texttt{student} ou \texttt{alumni}.
+  \item Deixe \texttt{draft: false}, senão a página não aparece.
+\end{enumerate}
+
+\subsection{Estrutura esperada}
+
+\begin{terminal}
+mfq/content/english/people/maria_silva/
+mfq/content/english/people/maria_silva/index.md
+mfq/content/english/people/maria_silva/maria_silva.jpg
+\end{terminal}
+
+\subsection{Modelo de index.md}
+
+\begin{terminal}
+---
+title: "Maria Silva"
+images:
+  - "maria_silva.jpg"
+summary: Ph.D. student
+categories: student
+draft: false
+---
+
+Short biography in English.
+
+[Lattes](http://exemplo.com)
+[ORCID](https://orcid.org/0000-0000-0000-0000)
+\end{terminal}
+
+\subsection{Observações importantes}
+
+\begin{itemize}
+  \item A foto pode ficar na resolução original. O Hugo corta e gera as versões usadas no site.
+  \item O \texttt{summary} é o texto curto que aparece nos cards.
+  \item O corpo do arquivo, abaixo do front matter, é o texto da página da pessoa.
+  \item O nome da pasta é importante porque ele pode ser usado em publicações como link do autor.
+\end{itemize}
+
+\section{Adicionar uma publicação nova}
+
+As publicações não ficam em um arquivo Markdown. Elas ficam em \path{mfq/content/english/publications/publications.yaml}.
+
+\subsection{Campos principais}
+
+Cada item precisa ter:
+
+\begin{itemize}
+  \item \texttt{title}
+  \item \texttt{link}
+  \item \texttt{authors}
+  \item \texttt{published\_in}
+  \item \texttt{date}
+\end{itemize}
+
+\subsection{Modelo de item}
+
+\begin{terminal}
+- title: Example paper title
+  link: https://doi.org/10.0000/exemplo
+  authors:
+  - name: Maria Silva
+    page: maria_silva
+  - name: Coauthor Name
+  published_in: Journal Name
+  date: '2026-03-25'
+\end{terminal}
+
+\subsection{Regras práticas}
+
+\begin{itemize}
+  \item Use a data no formato \texttt{AAAA-MM-DD}.
+  \item A página de publicações é ordenada automaticamente por data decrescente.
+  \item Se você colocar \texttt{page: maria\_silva}, o nome do autor vira link para \path{/people/maria_silva/}, desde que essa pasta exista.
+  \item Se o autor não tiver página no site, use só \texttt{name}.
+\end{itemize}
+
+\section{Adicionar um evento novo na galeria}
+
+Hoje o site não tem uma coleção separada chamada ``events''. Os eventos aparecem na galeria, em
+\path{mfq/content/english/gallery/index.md}, com as imagens na mesma pasta.
+
+\subsection{Passo a passo}
+
+\begin{enumerate}
+  \item Copie a imagem para \path{mfq/content/english/gallery/}.
+  \item Edite \path{mfq/content/english/gallery/index.md}.
+  \item Adicione um bloco novo com título, imagem, data, local e descrição.
+\end{enumerate}
+
+\subsection{Exemplo}
+
+\begin{terminal}
+## 2026
+
+### **Workshop on Quantum Foundations**
+{{< image "workshop-2026.jpg" >}}
+**Date:** March 20 to March 22, 2026
+**Location:** Campinas, SP, Brazil
+**Description:** Short description of the event.
+
+<hr>
+\end{terminal}
+
+\subsection{Observações}
+
+\begin{itemize}
+  \item A imagem precisa estar na mesma pasta de \path{index.md}.
+  \item O shortcode \texttt{\{\{< image "..."\ >\}\}} é o jeito correto de inserir a imagem.
+  \item Se quiser manter a galeria organizada, coloque o evento dentro do ano correspondente.
+\end{itemize}
+
+\section{Alterar ou adicionar tópicos de pesquisa}
+
+\subsection{Editar um tópico existente}
+
+Cada tópico é um arquivo em \path{mfq/content/english/research/}. Exemplos atuais:
+
+\begin{itemize}
+  \item \path{mfq/content/english/research/nonlocality.md}
+  \item \path{mfq/content/english/research/contextuality.md}
+  \item \path{mfq/content/english/research/gpts.md}
+\end{itemize}
+
+Edite o texto, o resumo e a imagem do arquivo desejado.
+
+\subsection{Adicionar um tópico novo}
+
+Crie um arquivo novo em \path{mfq/content/english/research/}. Exemplo:
+
+\begin{terminal}
+---
+title: "Quantum Steering"
+date: 2026-01-01T11:22:00+00:00
+image: "images/steering.png"
+description: "detailed view of quantum steering research"
+summary: Short summary shown on the research list page.
+draft: false
+---
+
+Full page text in English.
+\end{terminal}
+
+\subsection{O que controlar}
+
+\begin{itemize}
+  \item \texttt{draft: false} para a página aparecer.
+  \item O campo \texttt{date} ajuda a controlar a ordem de exibição dos tópicos.
+  \item O campo \texttt{summary} é o texto resumido da página \path{/research}.
+\end{itemize}
+
+\subsection{Importante: home e página de research não são a mesma coisa}
+
+Adicionar um arquivo novo em \path{mfq/content/english/research/} faz o tema aparecer na página
+\path{/research}. Mas os cards da home são controlados separadamente em
+\path{mfq/data/en/homepage.yml}.
+
+Se quiser que o novo tema também apareça na home, adicione um item novo em \path{about_product.items}:
+
+\begin{terminal}
+- image: "images/steering.png"
+  title: "Quantum Steering"
+  content: "Short summary for the homepage."
+  button:
+    enable: true
+    label: "Read more"
+    link: "research/steering"
+\end{terminal}
+
+\section{Adicionar uma Nonlocal Talk}
+
+A página \path{/talks} hoje é montada juntando os arquivos da pasta \path{mfq/content/english/talks/}.
+No uso normal, você deve editar estes arquivos:
+
+\begin{itemize}
+  \item \path{introduction.md}
+  \item \path{upcoming.md}
+  \item \path{previous.md}
+\end{itemize}
+
+\subsection{Fluxo recomendado}
+
+\begin{enumerate}
+  \item Coloque a próxima talk em \path{upcoming.md}.
+  \item Depois que a talk acontecer, mova o bloco para o topo de \path{previous.md}.
+  \item Se não houver talks agendadas, deixe \path{upcoming.md} com a mensagem ``More Soon!''.
+\end{enumerate}
+
+\subsection{Modelo para uma talk futura}
+
+\begin{terminal}
+<h1 style="display:inline-block;">Speaker Name</h1>
+&nbsp;&nbsp;&nbsp;
+<h2 style="display:inline-block;">(Institution, Country)</h2>
+
+## Talk Title
+### Apr 10, 2026
+
+Abstract of the talk.
+
+<br><br><hr>
+\end{terminal}
+
+\subsection{Observações}
+
+\begin{itemize}
+  \item O conteúdo mistura Markdown com HTML. Mantenha esse padrão.
+  \item Não crie um arquivo novo por talk, a menos que você também vá alterar o template.
+  \item A ordem da página depende dos arquivos existentes na seção, então o fluxo mais simples é continuar usando \path{upcoming.md} e \path{previous.md}.
+\end{itemize}
+
+\section{Ajustes frequentes fora desses blocos}
+
+\subsection{Textos gerais da home}
+
+Arquivo principal: \path{mfq/data/en/homepage.yml}
+
+Lá ficam, por exemplo:
+
+\begin{itemize}
+  \item título e texto do banner inicial;
+  \item seção ``A quick glance at our research'';
+  \item links dos botões da home.
+\end{itemize}
+
+\subsection{Página About / Contact}
+
+Arquivo principal: \path{mfq/content/english/about/_index.md}
+
+Ali você ajusta:
+
+\begin{itemize}
+  \item texto institucional;
+  \item e-mail do grupo;
+  \item localização;
+  \item conteúdo da página de contato.
+\end{itemize}
+
+\section{Checklist antes de fechar a tarefa}
+
+\begin{itemize}
+  \item Rode \texttt{git diff} e confira se você editou só o que queria.
+  \item Rode \texttt{hugo} dentro de \path{mfq/}.
+  \item Revise links, imagens e ortografia.
+  \item Faça commit com mensagem clara.
+\end{itemize}
+
+\section{Publicação no servidor}
+
+O deploy é feito copiando o conteúdo de \path{mfq/public/} para
+\path{public_html} no servidor do IMECC. Como esse passo depende de credenciais e política atual
+de acesso, confirme com a equipe antes de publicar.
+
+\begin{terminal}
+cd mfq
+hugo
+cd public
+scp -r * mfq@ssh.ime.unicamp.br:public_html/
+\end{terminal}
+
+Se esse procedimento mudar no futuro, atualize primeiro esta seção do manual.
+
+\section{Problemas comuns}
+
+\subsection{A página não apareceu}
+
+Verifique:
+
+\begin{itemize}
+  \item se \texttt{draft: false} está no front matter;
+  \item se o arquivo foi criado na pasta correta;
+  \item se o nome da imagem bate com o nome usado no arquivo;
+  \item se o \texttt{hugo} terminou sem erro.
+\end{itemize}
+
+\subsection{O link do autor na publicação não funciona}
+
+Verifique se o valor de \texttt{page} no YAML é exatamente o nome da pasta da pessoa em
+\path{mfq/content/english/people/}.
+
+\subsection{O preview local não abriu}
+
+Use:
+
+\begin{terminal}
+cd mfq
+hugo server
+\end{terminal}
+
+Se ainda falhar, verifique se você está dentro de \path{mfq/} e se o Hugo está instalado corretamente com
+\texttt{hugo version}.
+
+\section{Resumo final}
+
+Se você lembrar só de quatro coisas, lembre destas:
+
+\begin{enumerate}
+  \item Entre em \path{mfq/} para rodar o Hugo.
+  \item Pessoas ficam em \path{people/}, publicações em \path{publications.yaml}, talks em \path{talks/}.
+  \item Para a home, muitas vezes você também precisa mexer em \path{mfq/data/en/homepage.yml}.
+  \item Sempre gere o site com \texttt{hugo} antes de publicar.
+\end{enumerate}
+
+\end{document}

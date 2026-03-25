@@ -1,7 +1,72 @@
 publications:
+- title: Structure of quantum measurements implementable with one round of classical
+    communication
+  link: https://doi.org/10.1088/1361-6633/ae4fef
+  authors:
+  - name: Arthur C. R. Dutra
+    page: arthur
+  - name: Ties-A. Ohst
+  - name: Hai-Chau Nguyen
+  - name: Otfried Gühne
+  published_in: Reports on Progress in Physics
+  date: '2026-03-24'
+- title: Can outcome communication explain Bell nonlocality?
+  link: https://arxiv.org/abs/2510.09340
+  authors:
+  - name: Carlos Vieira
+    page: humberto
+  - name: Carlos de Gois
+    page: carlos
+  - name: Pedro Lauand
+    page: pedro
+  - name: Lucas E. A. Porto
+    page: porto
+  - name: Sébastien Designolle
+  - name: Marco Túlio Quintino
+  published_in: Preprint
+  date: '2025-10-14'
+- title: Communication-constrained nonlocal correlations
+  link: https://arxiv.org/abs/2603.08610
+  authors:
+  - name: Lucas Pollyceno
+    page: lucas
+  - name: Denis Freudenheim
+  - name: José Nogueira
+    page: jose
+  - name: Anubhav Chaturvedi
+  - name: Rafael Rabelo
+    page: rabelo
+  - name: Marcin Pawłowski
+  published_in: Preprint
+  date: '2026-03-09'
+- title: 'Bi-Contextuality: A Novel Non-Classical Phenomenon in Bipartite Quantum Systems'
+  link: https://arxiv.org/abs/2507.08461
+  authors:
+  - name: Gabriel Ruffolo
+    page: ruffolo
+  - name: Nigel Benjamin Lee Junsheng
+  - name: Kim Mu Young
+  - name: Dzmitry Matsukevich
+  - name: Rafael Rabelo
+    page: rabelo
+  - name: Dagomir Kaszlikowski
+  - name: Paweł Kurzyński
+  published_in: Preprint
+  date: '2025-07-11'
+- title: Quantum non-classicality in the simplest causal network
+  link: https://doi.org/10.1103/3854-r395
+  authors:
+  - name: Pedro Lauand
+    page: pedro
+  - name: Davide Poderini
+  - name: Rafael Rabelo
+    page: rabelo
+  - name: Rafael Chaves
+  published_in: Physical Review Letters
+  date: '2025-08-26'
 - title: Unexpected consequences of Post-Quantum theories in the graph-theoretical
     approach to correlations
-  link: https://arxiv.org/abs/2411.09036
+  link: https://doi.org/10.1103/PhysRevA.111.052418
   authors:
   - name: José Nogueira
     page: jose
@@ -9,8 +74,8 @@ publications:
     page: humberto
   - name: Marcelo Terra Cunha
     page: terra
-  published_in: Preprint
-  date: '2024-11-13'
+  published_in: Physical Review A
+  date: '2025-05-09'
 - title: Characterizing Optimal-speed unitary time evolution of pure and quasi-pure
     quantum states
   link: https://arxiv.org/abs/2408.07794
@@ -23,8 +88,8 @@ publications:
   - name: Lino Grama
   published_in: Preprint
   date: '2024-08-14'
-- title: Monogamy of nonlocality from multipartite information causality
-  link: https://arxiv.org/abs/2405.20115
+- title: Security of device-independent quantum key distribution via monogamy relations from multipartite information causality
+  link: https://doi.org/10.1103/jnng-m87v
   authors:
   - name: Lucas Pollyceno
     page: lucas
@@ -32,8 +97,8 @@ publications:
   - name: Chithra Raj
   - name: Pedro R. Dieguez
   - name: Marcin Pawłowski
-  published_in: Preprint
-  date: '2024-01-01'
+  published_in: Physical Review A
+  date: '2025-10-01'
 - title: Causal Data Fusion with Quantum Confounders
   link: https://arxiv.org/abs/2405.19278
   authors:
@@ -76,7 +141,7 @@ publications:
   date: '2024-08-30'
 - title: Characterizing randomness in parameterized quantum circuits through expressibility
     and average entanglement
-  link: https://arxiv.org/abs/2405.02265
+  link: https://doi.org/10.1088/2058-9565/ad80be
   authors:
   - name: Guilherme Ilário Correr
     page: guilherme_ilario
@@ -84,10 +149,10 @@ publications:
   - name: Pedro C. Azado
   - name: Alexandre Drinko
   - name: Diogo O. Soares-Pinto
-  published_in: Preprint
-  date: '2024-01-01'
+  published_in: Quantum Science and Technology
+  date: '2024-10-14'
 - title: Quantum non-classicality in the simplest causal network
-  link: https://arxiv.org/abs/2404.12790
+  link: https://doi.org/10.48550/arXiv.2404.12790
   authors:
   - name: Pedro Lauand
     page: pedro
@@ -95,8 +160,8 @@ publications:
   - name: Rafael Rabelo
     page: rabelo
   - name: Rafael Chaves
-  published_in: Preprint
-  date: '2024-01-01'
+  published_in: Physical Review Letters
+  date: '2025-08-26'
 - title: Observational-Interventional Bell Inequalities
   link: https://arxiv.org/abs/2404.05015
   authors:
@@ -143,7 +208,7 @@ publications:
   date: '2023-01-01'
 - title: Witnessing Non-Classicality in a Simple Causal Structure with Three Observable
     Variables
-  link: https://arxiv.org/abs/2211.13349
+  link: https://doi.org/10.1103/PRXQuantum.4.020311
   authors:
   - name: Pedro Lauand
     page: pedro
@@ -155,17 +220,17 @@ publications:
   - name: Rafael Rabelo
     page: rabelo
   - name: Rafael Chaves
-  published_in: Preprint
-  date: '2022-01-01'
-- title: No-broadcasting theorem for non-signalling boxes and assemblages
-  link: https://arxiv.org/abs/2211.14351
+  published_in: PRX Quantum
+  date: '2022-04-20'
+- title: No-local-broadcasting theorem for non-signalling behaviours and assemblages 
+  link: https://doi.org/10.1103/q5gp-yjkd
   authors:
   - name: Carlos Vieira
     page: humberto
   - name: Adrian Solymos
   - name: Cristhiano Duarte
   - name: Zoltán Zimborás
-  published_in: Preprint
+  published_in: Physical Review A
   date: '2022-01-01'
 - title: Synchronous observation of Bell nonlocality and state-dependent Kochen-Specker
     contextuality
@@ -187,7 +252,7 @@ publications:
   date: '2022-01-01'
 - title: Interplays between classical and quantum entanglement-assisted communication
     scenarios
-  link: https://arxiv.org/abs/2205.05171
+  link: https://doi.org/10.1088/1367-2630/ad0526
   authors:
   - name: Carlos Vieira
     page: humberto
@@ -197,8 +262,8 @@ publications:
     page: lucas
   - name: Rafael Rabelo
     page: rabelo
-  published_in: Preprint
-  date: '2022-01-01'
+  published_in: New Journal of Physics
+  date: '2023-11-03'
 - title: Differential Geometry of Contextuality
   link: https://arxiv.org/abs/2202.08719
   authors:
@@ -222,23 +287,6 @@ publications:
   - name: Alessandro Fedrizzi
   - name: Rafael Chaves
   published_in: npj Quantum Information
-  date: '2021-06-01'
-- title: Quantum communication complexity beyond Bell nonlocality
-  link: https://arxiv.org/abs/2106.06552
-  authors:
-  - name: Joseph Ho
-  - name: George Moreno
-  - name: Samuraí Brito
-  - name: Francesco Graffitti
-  - name: Christopher L. Morrison
-  - name: Ranieri Nery
-  - name: Alexander Pickston
-  - name: Massimiliano Proietti
-  - name: Rafael Rabelo
-    page: rabelo
-  - name: Alessandro Fedrizzi
-  - name: Rafael Chaves
-  published_in: Preprint
   date: '2021-06-01'
 - title: Contextuality in the Bundle Approach, n-Contextuality, and the Role of Holonomyontextuality
     in the Fibration Approach and the Role of Holonomy
