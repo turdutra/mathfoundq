@@ -160,4 +160,44 @@
   </div>
 </section>
 
+<section class="section gallery">
+  <div class="container">
+    <!-- Visitors Section -->
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h1>Visitors</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      {{ range (where .Site.RegularPages "Section" "people") }}
+        {{ if eq .Params.categories "visitor" }}
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="block">
+              <div class="gallery-overlay d-flex align-items-center justify-content-center">
+                <a href="{{ .Permalink }}" class="gallery-popup">
+                  <i class="tf-ion-plus-round"></i>
+                </a>
+              </div>
+              {{ partial "person-image.html" (dict
+                "page" .
+                "src" (index .Params.images 0)
+                "alt" .Title
+                "class" "img-fluid"
+                "loading" "lazy"
+                "sizes" "(max-width: 576px) 100vw, (max-width: 768px) 50vw, 25vw"
+                "width" 400
+                "height" 265
+              ) }}
+            </div>
+            <div class="product-info text-center">
+              <h4 class="mb-2"><a href="{{ .Permalink }}" class="link-title">{{ .Title }}</a></h4>
+              <p class="price">{{ .Params.summary }}</p>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
 {{ end }}

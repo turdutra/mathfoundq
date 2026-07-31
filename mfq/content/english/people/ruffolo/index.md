@@ -3,8 +3,8 @@ title: "Gabriel Ruffolo"
 images: 
   - "ruffolo.jpg"
 
-summary: Ph.D. student
-categories: student
+summary: Alumni 
+categories: alumni
 draft: false
 ---
 

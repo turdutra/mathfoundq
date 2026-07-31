@@ -1,4 +1,32 @@
 publications:
+- title: Non-signaling assistance in prepare-and-measure scenarios with classical
+    communication
+  link: https://doi.org/10.48550/arXiv.2607.01193
+  authors:
+  - name: José Nogueira
+    page: jose
+  - name: Carlos Vieira
+    page: humberto
+  - name: Lucas E. A. Porto
+    page: porto
+  - name: Lucas Pollyceno
+    page: lucas
+  - name: Rafael Rabelo
+    page: rabelo
+  - name: Otfried Gühne
+  published_in: Preprint
+  date: '2026-07-01'
+- title: How Quantum Contextuality disappears in the Classical Limit
+  link: https://doi.org/10.48550/arXiv.2604.24735
+  authors:
+  - name: Arthur C. R. Dutra
+    page: arthur
+  - name: Roberto D. Baldijão
+    page: roberto
+  - name: Marcelo Terra Cunha
+    page: terra
+  published_in: Preprint 
+  date: '2026-04-27'
 - title: Structure of quantum measurements implementable with one round of classical
     communication
   link: https://doi.org/10.1088/1361-6633/ae4fef

@@ -12,7 +12,7 @@
         <div class="product-slider" id="meet-us-slider">
           {{ range (where .Site.RegularPages "Section" "people") }}
             {{ $img := index .Params.images 0 }}
-            {{ if and (not (in $img "alice.")) (not (in $img "bob.")) (not (in .Params.categories "alumni")) }}
+            {{ if and (not (in $img "alice.")) (not (in $img "bob.")) (not (in .Params.categories "alumni")) (not (in .Params.categories "visitor")) }}
             <div class="block" data-category="{{ .Params.categories }}">
               <div class="slider-gallery-overlay">
                 <a href="{{ .Permalink }}" class="slider-gallery-popup">

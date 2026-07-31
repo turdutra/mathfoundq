@@ -3,8 +3,8 @@ title: "Rodrigo Ramos"
 images: 
   - "rodrigo_ramos.webp"
 
-summary: M.Sc. student
-categories: student
+summary: Alumni 
+categories: alumni
 draft: false
 ---
 

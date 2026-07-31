@@ -3,8 +3,8 @@ title: "John A. Mora Rodríguez"
 images: 
   - "john_alexander.jpeg"
 
-summary: Ph.D. student
-categories: student
+summary: Alumni 
+categories: alumni
 draft: false
 ---
 Ph.D. student in applied mathematics.

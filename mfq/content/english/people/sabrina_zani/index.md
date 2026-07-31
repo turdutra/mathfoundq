@@ -3,8 +3,8 @@ title: "Sabrina Zani"
 images: 
   - "sabrina_zani.jpg"
 
-summary: M.Sc. student
-categories: student
+summary: Alumni
+categories: alumni
 draft: false
 ---
 M.Sc. student in applied mathematics.

@@ -3,8 +3,8 @@ title: "Alexandre Teodoro Garcia"
 images: 
   - "alexandre_garcia.webp"
 
-summary: Undergraduate student
-categories: student
+summary: Alumni
+categories: alumni
 draft: false
 ---
 Undergraduate student doing scientific initiation.
