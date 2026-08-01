@@ -3,7 +3,7 @@ title: "Pedro Souza"
 images: 
   - "bob.png"
 
-summary: Undergraduate student
+summary: Msc. student
 categories: student
 draft: false
 ---
