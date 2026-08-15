@@ -55,7 +55,7 @@
 
 \title{Guia Completo de Manutenção do Site MFQ}
 \author{}
-\date{25 de março de 2026}
+
 
 \begin{document}
 
@@ -202,28 +202,74 @@ hugo version
 
 \section{Primeira configuração do projeto}
 
-\subsection{Se você for o mantenedor principal}
+\subsection{Se você for o novo mantenedor principal}
 
-A primeira coisa a fazer é criar um \emph{fork} do repositório no GitHub.
-Esse fork é uma cópia do projeto na sua conta, o que facilita continuidade, administração e recuperação do histórico.
+Se você está assumindo a manutenção principal do site (por exemplo, porque o mantenedor anterior saiu do
+projeto), o primeiro passo é criar um \emph{fork} do repositório na sua própria conta do GitHub.
+Esse fork é uma cópia completa do projeto, com todo o histórico, e é o que garante continuidade,
+administração e controle total mesmo que o repositório original deixe de existir.
 
-Depois, clone o seu fork e entre na pasta:
+Você pode fazer isso pelo terminal ou pelo site do GitHub. Escolha a opção que preferir.
+
+\textbf{Opção A: pelo terminal (GitHub CLI)}
+
+Instale o \texttt{gh} se ainda não tiver:
+
+\textbf{Debian / Ubuntu}
+\begin{terminal}
+sudo apt update
+sudo apt install gh
+\end{terminal}
+
+\textbf{Fedora}
+\begin{terminal}
+sudo dnf install gh
+\end{terminal}
+
+\textbf{Arch / Manjaro}
+\begin{terminal}
+sudo pacman -S github-cli
+\end{terminal}
+
+Depois, autentique-se com a sua conta do GitHub (só precisa fazer isso uma vez):
 
 \begin{terminal}
-git clone <URL_DO_SEU_FORK> mathfoundq
+gh auth login
+\end{terminal}
+
+Com o \texttt{gh} autenticado, o comando abaixo já cria o fork na sua conta, clona o fork para o seu
+computador e configura o repositório original como remoto \texttt{upstream} (útil para trazer atualizações
+dele no futuro):
+
+\begin{terminal}
+gh repo fork BiduRuiz/mathfoundq --clone=true --remote=true
 cd mathfoundq
 \end{terminal}
 
-\subsection{Se você só vai fazer edições pontuais}
+\textbf{Opção B: pelo site do GitHub}
 
-Se você não for o mantenedor principal, peça à equipe a URL do repositório que deve receber as mudanças e clone normalmente:
+\begin{enumerate}
+  \item Abra a página do repositório original no GitHub.
+  \item Clique no botão \textbf{Fork}, no canto superior direito da página.
+  \item Confirme a criação do fork na sua própria conta.
+\end{enumerate}
+
+Depois, clone o fork para o seu computador. Troque \texttt{SEU\_USUARIO} pelo seu nome de usuário do GitHub:
 
 \begin{terminal}
-git clone <URL_DO_REPOSITORIO> mathfoundq
+git clone https://github.com/SEU_USUARIO/mathfoundq mathfoundq
 cd mathfoundq
 \end{terminal}
 
-\noindent O branch principal deste projeto é \texttt{master}.
+Se quiser poder trazer atualizações do repositório original depois, configure-o também como remoto
+\texttt{upstream} (a Opção A já faz isso automaticamente):
+
+\begin{terminal}
+git remote add upstream https://github.com/BiduRuiz/mathfoundq.git
+\end{terminal}
+
+A partir desse momento, o fork na sua conta passa a ser o repositório oficial, o que você deve administrar
+e manter atualizado.
 
 \section{Como usar Git neste projeto}
 

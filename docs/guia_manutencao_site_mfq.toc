@@ -1,0 +1,50 @@
+\contentsline {section}{\numberline {1}Visão geral do repositório}{4}{section.1}%
+\contentsline {section}{\numberline {2}Instalação}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Windows}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Linux}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Git}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Hugo}{5}{subsubsection.2.2.2}%
+\contentsline {section}{\numberline {3}Primeira configuração do projeto}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Se você for o novo mantenedor principal}{5}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Como usar Git neste projeto}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}O que é o Git}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Conceitos que importam aqui}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Fluxo simples no terminal}{7}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Fluxo simples no VS Code}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Comandos que vale conhecer}{8}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Como usar Hugo neste projeto}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Visualizar o site localmente}{8}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Gerar a versão final do site}{8}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}O que verificar antes de publicar}{8}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Adicionar uma pessoa nova}{9}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Passo a passo}{9}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Estrutura esperada}{9}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Modelo de index.md}{9}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Observações importantes}{9}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Adicionar uma publicação nova}{10}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Campos principais}{10}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Modelo de item}{10}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Regras práticas}{10}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Adicionar um evento novo na galeria}{10}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Passo a passo}{10}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Exemplo}{11}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Observações}{11}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Alterar ou adicionar tópicos de pesquisa}{11}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Editar um tópico existente}{11}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Adicionar um tópico novo}{11}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}O que controlar}{12}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Importante: home e página de research não são a mesma coisa}{12}{subsection.9.4}%
+\contentsline {section}{\numberline {10}Adicionar uma Nonlocal Talk}{12}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Fluxo recomendado}{12}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Modelo para uma talk futura}{12}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Observações}{13}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Ajustes frequentes fora desses blocos}{13}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Textos gerais da home}{13}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Página About / Contact}{13}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Checklist antes de fechar a tarefa}{13}{section.12}%
+\contentsline {section}{\numberline {13}Publicação no servidor}{14}{section.13}%
+\contentsline {section}{\numberline {14}Problemas comuns}{14}{section.14}%
+\contentsline {subsection}{\numberline {14.1}A página não apareceu}{14}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}O link do autor na publicação não funciona}{14}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}O preview local não abriu}{14}{subsection.14.3}%
+\contentsline {section}{\numberline {15}Resumo final}{14}{section.15}%
